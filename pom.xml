@@ -15,7 +15,7 @@
 
 	<groupId>org.jboss.quickstarts.fuse</groupId>
 	<artifactId>sap-quickstarts-parent</artifactId>
-	<version>7.1.0.fuse-710023-redhat-00001</version>
+	<version>3.20.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>SAP Quickstarts Parent</name>
@@ -31,25 +31,24 @@
 	</licenses>
 
 	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- dependency versions -->
-		<!-- 
-		<camel-sap-version>7.0.0.fuse-000211-redhat-1</camel-sap-version>
-		 -->
-		<camel-sap-version>7.1.0-SNAPSHOT</camel-sap-version>
-		<camel-version>2.21.0.fuse-710018-redhat-00001</camel-version>
+		<camel-sap-version>3.20.1.redhat-00004</camel-sap-version>
+		<camel-version>3.20.1.redhat-00008</camel-version>
+		<camel-community-version>3.20.1</camel-community-version>
+		<camel-spring-boot-version>3.20.1.redhat-00025</camel-spring-boot-version>
+        <spring-boot-version>2.7.8</spring-boot-version>
 		<slf4j-api-version>1.7.22</slf4j-api-version>
 		<slf4j-version>1.7.22</slf4j-version>
-		<log4j-version>1.2.17</log4j-version>
-		<sapjco3-version>3.0.11</sapjco3-version>
-		<sapidoc3-version>3.0.10</sapidoc3-version>
+		<sapjco3-version>3.1.4</sapjco3-version>
+		<sapidoc3-version>3.1.1</sapidoc3-version>
 		<!-- plugin versions -->
 		<maven-compiler-plugin-version>3.7.0</maven-compiler-plugin-version>
 		<maven-resources-plugin-version>3.0.2</maven-resources-plugin-version>
-		<camel-maven-plugin-version>2.21.0.fuse-710018-redhat-00001</camel-maven-plugin-version>
+		<camel-maven-plugin-version>${camel-community-version}</camel-maven-plugin-version>
 		<maven-bundle-plugin-version>3.3.0</maven-bundle-plugin-version>
 		<build-helper-maven-plugin-version>3.0.0</build-helper-maven-plugin-version>
 		<fabric8-maven-plugin-version>3.5.26</fabric8-maven-plugin-version>
@@ -122,7 +121,7 @@
 			<dependency>
 				<groupId>org.apache.camel</groupId>
 				<artifactId>camel-spring</artifactId>
-				<version>${camel-version}</version>
+				<version>${camel-community-version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.camel</groupId>
@@ -146,25 +145,14 @@
 				<artifactId>slf4j-log4j12</artifactId>
 				<version>${slf4j-version}</version>
 			</dependency>
-			<dependency>
-				<groupId>log4j</groupId>
-				<artifactId>log4j</artifactId>
-				<version>${log4j-version}</version>
-			</dependency>
-
 			<!-- testing -->
 			<dependency>
 				<groupId>org.apache.camel</groupId>
-				<artifactId>camel-test-spring</artifactId>
+				<artifactId>camel-test-spring-junit5</artifactId>
 				<scope>test</scope>
 				<version>${camel-version}</version>
 			</dependency>
-			<dependency>
-				<groupId>org.apache.camel</groupId>
-				<artifactId>camel-test-blueprint</artifactId>
-				<scope>test</scope>
-				<version>${camel-version}</version>
-			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
