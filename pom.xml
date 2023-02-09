@@ -130,6 +130,22 @@
 				<version>${camel-version}</version>
 			</dependency>
 
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-spring</artifactId>
+				<version>${camel-community-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-spring-xml</artifactId>
+				<version>${camel-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-spring-main</artifactId>
+				<version>${camel-community-version}</version>
+			</dependency>
+
 			<!-- logging -->
 			<dependency>
 				<groupId>org.slf4j</groupId>
