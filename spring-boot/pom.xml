@@ -57,6 +57,38 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
+	<modules>
+		<module>sap-idoclist-server-spring-boot</module>
+		<module>sap-srfc-destination-spring-boot</module>
+		<module>sap-qidoc-destination-spring-boot</module>
+		<module>sap-srfc-server-spring-boot</module>
+		<module>sap-idoc-destination-spring-boot</module>
+		<module>sap-qidoclist-destination-spring-boot</module>
+		<module>sap-trfc-destination-spring-boot</module>
+		<module>sap-idoclist-destination-spring-boot</module>
+		<module>sap-qrfc-destination-spring-boot</module>
+		<module>sap-trfc-server-spring-boot</module>
+	</modules>
+
+	<build>
+        <defaultGoal>install</defaultGoal>
+        <pluginManagement>
+            <plugins>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<version>${spring-boot-version}</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>repackage</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>
   
