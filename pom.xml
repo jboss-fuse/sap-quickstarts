@@ -40,11 +40,12 @@
 		<camel-version>3.20.1.redhat-00008</camel-version>
 		<camel-community-version>3.20.1</camel-community-version>
 		<camel-spring-boot-version>3.20.1.redhat-00025</camel-spring-boot-version>
-        <spring-boot-version>2.7.8</spring-boot-version>
+		<spring-boot-version>2.7.8</spring-boot-version>
 		<slf4j-api-version>1.7.22</slf4j-api-version>
 		<slf4j-version>1.7.22</slf4j-version>
 		<sapjco3-version>3.1.4</sapjco3-version>
 		<sapidoc3-version>3.1.1</sapidoc3-version>
+
 		<!-- plugin versions -->
 		<maven-compiler-plugin-version>3.7.0</maven-compiler-plugin-version>
 		<maven-resources-plugin-version>3.0.2</maven-resources-plugin-version>
@@ -117,11 +118,6 @@
 				<groupId>org.apache.camel</groupId>
 				<artifactId>camel-core</artifactId>
 				<version>${camel-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.camel</groupId>
-				<artifactId>camel-spring</artifactId>
-				<version>${camel-community-version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.camel</groupId>
