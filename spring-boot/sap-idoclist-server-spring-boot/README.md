@@ -8,8 +8,8 @@ Author: William Collins - Fuse Team
 Level: Beginner  
 Technologies: SAP, Camel, Spring  
 Summary: This quickstart demonstrates how to configure and use the sap-idoclist-server component in a Spring Boot Camel environment to handle Intermediate Document (IDoc) lists sent from SAP. This component handles document lists from SAP using the *Transactional RFC* (tRFC) protocol.       
-Target Product: Fuse  
-Source: <http://github.com/punkhorn/sap-quickstarts/>  
+Target Product: Red Hat Build of Camel Spring Boot
+Source: <http://github.com/jboss-fuse/sap-quickstarts/>
 
 * * *  
 
@@ -39,9 +39,9 @@ System requirements
 
 Before building and running this quick start you will need:
 
-* Maven 3.1.1 or higher
-* JDK 1.8
-* JBoss Fuse 7.0.0
+* Maven 3.6.2 or higher
+* JDK 11
+* Red Hat Build of Camel Spring Boot
 * SAP JCo3 and IDoc3 libraries (sapjco3.jar, sapidoc3.jar and JCo native library for your OS platform)
 * SAP instance with [Flight Data Application](http://help.sap.com/saphelp_erp60_sp/helpdata/en/db/7c623cf568896be10000000a11405a/content.htm) setup.
 

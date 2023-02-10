@@ -8,7 +8,7 @@ Author: William Collins - Fuse Team
 Level: Beginner to Advanced  
 Technologies: SAP, Camel, JBoss Fuse   
 Summary: These quick starts demonstrates how to configure and use the suite of JBoss Fuse SAP Camel components to integrate Apache Camel with SAP.       
-Target Product: Fuse  
+Target Product: Red Hat Build of Camel Spring Boot
 Source: <http://github.com/fusesource/sap-quickstarts/>  
 
 ***  
@@ -42,9 +42,9 @@ System requirements
 
 To run these quick starts you will need:
 
-* Maven 3.1.1 or higher
-* JDK 1.8
-* JBoss Fuse 7.0.0
+* Maven 3.6.2 or higher
+* JDK 11
+* Red Hat Build of Camel Spring Boot
 * SAP JCo3 and IDoc3 libraries (sapjco3.jar, sapidoc3.jar and JCo native library for your OS platform)
 * SAP instance with [Flight Data Application](http://help.sap.com/saphelp_erp60_sp/helpdata/en/db/7c623cf568896be10000000a11405a/content.htm) setup.
 

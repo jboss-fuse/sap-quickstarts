@@ -16,7 +16,7 @@
 
 	<groupId>org.jboss.quickstarts.fuse</groupId>
 	<artifactId>sap-quickstarts-spring-boot-parent</artifactId>
-	<version>7.1.0.fuse-710023-redhat-00001</version>
+	<version>3.20.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Spring Boot Examples Parent</name>
@@ -27,36 +27,41 @@
 	<parent>
 		<groupId>org.jboss.quickstarts.fuse</groupId>
 		<artifactId>sap-quickstarts-parent</artifactId>
-		<version>7.1.0.fuse-710023-redhat-00001</version>
+		<version>3.20.1-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-dependencies</artifactId>
-				<version>1.5.8.RELEASE</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.camel</groupId>
-				<artifactId>camel-core-starter</artifactId>
-				<version>${camel-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.camel</groupId>
-				<artifactId>camel-spring-boot-starter</artifactId>
-				<version>${camel-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.fusesource</groupId>
-				<artifactId>camel-sap-starter</artifactId>
-				<version>7.1.0-SNAPSHOT</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-	
+	<modules>
+		<module>sap-idoclist-server-spring-boot</module>
+		<module>sap-srfc-destination-spring-boot</module>
+		<module>sap-qidoc-destination-spring-boot</module>
+		<module>sap-srfc-server-spring-boot</module>
+		<module>sap-idoc-destination-spring-boot</module>
+		<module>sap-qidoclist-destination-spring-boot</module>
+		<module>sap-trfc-destination-spring-boot</module>
+		<module>sap-idoclist-destination-spring-boot</module>
+		<module>sap-qrfc-destination-spring-boot</module>
+		<module>sap-trfc-server-spring-boot</module>
+	</modules>
+
+	<build>
+        <defaultGoal>install</defaultGoal>
+        <pluginManagement>
+            <plugins>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<version>${spring-boot-version}</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>repackage</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>
   
