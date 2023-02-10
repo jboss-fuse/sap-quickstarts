@@ -19,12 +19,10 @@
 	</parent>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>org.fusesource</groupId>
 			<artifactId>camel-sap</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-core</artifactId>
@@ -45,7 +43,6 @@
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-test-spring-junit5</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -54,7 +51,6 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>com.sap.conn.jco</groupId>
 			<artifactId>sapjco3</artifactId>
@@ -69,7 +65,6 @@
 			<scope>system</scope>
 			<systemPath>${basedir}/lib/sapidoc3.jar</systemPath>
 		</dependency>
-
 	</dependencies>
 
 	<build>
