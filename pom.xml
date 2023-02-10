@@ -36,9 +36,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- dependency versions -->
-		<camel-sap-version>3.20.1.redhat-00004</camel-sap-version>
-		<camel-version>3.20.1.redhat-00008</camel-version>
-		<camel-community-version>3.20.1</camel-community-version>
 		<camel-spring-boot-version>3.20.1.redhat-00025</camel-spring-boot-version>
 		<spring-boot-version>2.7.8</spring-boot-version>
 		<slf4j-api-version>1.7.22</slf4j-api-version>
@@ -49,7 +46,7 @@
 		<!-- plugin versions -->
 		<maven-compiler-plugin-version>3.7.0</maven-compiler-plugin-version>
 		<maven-resources-plugin-version>3.0.2</maven-resources-plugin-version>
-		<camel-maven-plugin-version>${camel-community-version}</camel-maven-plugin-version>
+		<camel-maven-plugin-version>3.20.1</camel-maven-plugin-version>
 		<maven-bundle-plugin-version>3.3.0</maven-bundle-plugin-version>
 		<build-helper-maven-plugin-version>3.0.0</build-helper-maven-plugin-version>
 		<fabric8-maven-plugin-version>3.5.26</fabric8-maven-plugin-version>
@@ -106,45 +103,22 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- SAP component dependency for compiling processor beans -->
-			<dependency>
-				<groupId>org.fusesource</groupId>
-				<artifactId>camel-sap</artifactId>
-				<version>${camel-sap-version}</version>
-			</dependency>
 
-			<!-- Camel dependencies -->
-			<dependency>
-				<groupId>org.apache.camel</groupId>
-				<artifactId>camel-core</artifactId>
-				<version>${camel-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.camel</groupId>
-				<artifactId>camel-blueprint</artifactId>
-				<version>${camel-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.camel</groupId>
-				<artifactId>camel-jaxb</artifactId>
-				<version>${camel-version}</version>
-			</dependency>
+            <dependency>
+                <groupId>com.redhat.camel.springboot.platform</groupId>
+                <artifactId>camel-springboot-bom</artifactId>
+                <version>${camel-spring-boot-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
-			<dependency>
-				<groupId>org.apache.camel</groupId>
-				<artifactId>camel-spring</artifactId>
-				<version>${camel-community-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.camel</groupId>
-				<artifactId>camel-spring-xml</artifactId>
-				<version>${camel-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.camel</groupId>
-				<artifactId>camel-spring-main</artifactId>
-				<version>${camel-community-version}</version>
-			</dependency>
+            <dependency>
+                <groupId>org.apache.camel.springboot</groupId>
+                <artifactId>camel-spring-boot-dependencies</artifactId>
+                <version>${camel-spring-boot-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
 			<!-- logging -->
 			<dependency>
@@ -158,12 +132,7 @@
 				<version>${slf4j-version}</version>
 			</dependency>
 			<!-- testing -->
-			<dependency>
-				<groupId>org.apache.camel</groupId>
-				<artifactId>camel-test-spring-junit5</artifactId>
-				<scope>test</scope>
-				<version>${camel-version}</version>
-			</dependency>
+
 
 		</dependencies>
 	</dependencyManagement>

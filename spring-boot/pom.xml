@@ -31,33 +31,6 @@
 		<relativePath>..</relativePath>
 	</parent>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-dependencies</artifactId>
-				<version>${spring-boot-version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.camel.springboot</groupId>
-				<artifactId>camel-core-starter</artifactId>
-				<version>${camel-spring-boot-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.camel.springboot</groupId>
-				<artifactId>camel-spring-boot-starter</artifactId>
-				<version>${camel-spring-boot-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.fusesource</groupId>
-				<artifactId>camel-sap-starter</artifactId>
-				<version>${camel-spring-boot-version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<modules>
 		<module>sap-idoclist-server-spring-boot</module>
 		<module>sap-srfc-destination-spring-boot</module>
