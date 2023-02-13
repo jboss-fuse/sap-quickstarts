@@ -18,13 +18,13 @@ public class SAPRoute extends RouteBuilder {
 				.to("bean:fredIDoc")
 				.log("${body}")
 				.to("sap-idoc-destination:quickstartDest:FLCUSTOMER_CREATEFROMDATA01")
-				.to("ean:barneyIDoc")
+				.to("bean:barneyIDoc")
 				.log("${body}")
 				.to("sap-idoc-destination:quickstartDest:FLCUSTOMER_CREATEFROMDATA01")
-				.to("ean:wilmaIDoc")
+				.to("bean:wilmaIDoc")
 				.log("${body}")
 				.to("sap-idoc-destination:quickstartDest:FLCUSTOMER_CREATEFROMDATA01")
-				.to("ean:bettyIDoc")
+				.to("bean:bettyIDoc")
 				.log("${body}")
 				.to("sap-idoc-destination:quickstartDest:FLCUSTOMER_CREATEFROMDATA01");
 	}
