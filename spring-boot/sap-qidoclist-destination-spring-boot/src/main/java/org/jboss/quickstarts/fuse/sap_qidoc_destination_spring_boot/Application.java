@@ -14,15 +14,13 @@
  * permissions and limitations under the License.
  *
  */
-package org.jboss.quickstarts.fuse.sap_qidoclist_destination_spring_boot;
+package org.jboss.quickstarts.fuse.sap_qidoc_destination_spring_boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
-// load regular Spring XML file from the classpath that contains the Camel XML DSL
-@ImportResource({"classpath:spring/camel-context.xml"})
 public class Application {
 
     /**

@@ -14,7 +14,7 @@
  * permissions and limitations under the License.
  * 
  */
-package org.jboss.quickstarts.fuse.sap_qidoclist_destination_spring_boot;
+package org.jboss.quickstarts.fuse.sap_qidoc_destination_spring_boot;
 
 import org.apache.camel.Exchange;
 import org.fusesource.camel.component.sap.SapTransactionalIDocListDestinationEndpoint;
