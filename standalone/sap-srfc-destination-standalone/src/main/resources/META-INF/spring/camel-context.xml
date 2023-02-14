@@ -24,7 +24,7 @@
 
 	<!-- Instantiates a processor bean which builds a request to the GetList method of the FlightCustomer BAPI
 	 	 and sets that request in the body of the exchange's message. -->
-	<bean id="request" class="org.jboss.quickstarts.fuse.sap_srfc_destination_standalone.CreateRequest"/>
+	<bean id="request" class="com.redhat.quickstarts.fuse.sap_srfc_destination_standalone.CreateRequest"/>
 
 	<!-- Configures the Inbound and Outbound SAP Connections -->
 	<bean id="sap-configuration"

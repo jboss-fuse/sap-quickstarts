@@ -13,7 +13,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.jboss.quickstarts.fuse</groupId>
+	<groupId>com.redhat.quickstarts.fuse</groupId>
 	<artifactId>sap-quickstarts-parent</artifactId>
 	<version>3.20.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -111,8 +111,6 @@
 				<version>${slf4j-version}</version>
 			</dependency>
 			<!-- testing -->
-
-
 		</dependencies>
 	</dependencyManagement>
 

@@ -35,10 +35,10 @@
 
 	<!-- Instantiates processor beans which build a FLCUSTOMER_CREATEFROMDATA01 IDoc 
 	 	 and sets that IDoc in the body of the exchange's message. -->
-	<bean id="fredIDoc" class="org.jboss.quickstarts.fuse.sap_qidoc_destination_standalone.CreateFredIDoc"/>
-	<bean id="barneyIDoc" class="org.jboss.quickstarts.fuse.sap_qidoc_destination_standalone.CreateBarneyIDoc"/>
-	<bean id="wilmaIDoc" class="org.jboss.quickstarts.fuse.sap_qidoc_destination_standalone.CreateWilmaIDoc"/>
-	<bean id="bettyIDoc" class="org.jboss.quickstarts.fuse.sap_qidoc_destination_standalone.CreateBettyIDoc"/>
+	<bean id="fredIDoc" class="com.redhat.quickstarts.fuse.sap_qidoc_destination_standalone.CreateFredIDoc"/>
+	<bean id="barneyIDoc" class="com.redhat.quickstarts.fuse.sap_qidoc_destination_standalone.CreateBarneyIDoc"/>
+	<bean id="wilmaIDoc" class="com.redhat.quickstarts.fuse.sap_qidoc_destination_standalone.CreateWilmaIDoc"/>
+	<bean id="bettyIDoc" class="com.redhat.quickstarts.fuse.sap_qidoc_destination_standalone.CreateBettyIDoc"/>
 
 	<!-- Configures the Inbound and Outbound SAP Connections -->
 	<bean id="sap-configuration"

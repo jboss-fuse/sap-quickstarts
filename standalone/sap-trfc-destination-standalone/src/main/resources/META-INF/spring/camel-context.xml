@@ -35,10 +35,10 @@
 
 	<!-- Instantiates processor beans which build requests to the GetList method of the FlightCustomer BAPI
 	 	 and sets those requests in the body of the exchange's message. -->
-	<bean id="fredRequest" class="org.jboss.quickstarts.fuse.sap_trfc_destination_standalone.CreateFredRequest"/>
-	<bean id="barneyRequest" class="org.jboss.quickstarts.fuse.sap_trfc_destination_standalone.CreateBarneyRequest"/>
-	<bean id="wilmaRequest" class="org.jboss.quickstarts.fuse.sap_trfc_destination_standalone.CreateWilmaRequest"/>
-	<bean id="bettyRequest" class="org.jboss.quickstarts.fuse.sap_trfc_destination_standalone.CreateBettyRequest"/>
+	<bean id="fredRequest" class="com.redhat.quickstarts.fuse.sap_trfc_destination_standalone.CreateFredRequest"/>
+	<bean id="barneyRequest" class="com.redhat.quickstarts.fuse.sap_trfc_destination_standalone.CreateBarneyRequest"/>
+	<bean id="wilmaRequest" class="com.redhat.quickstarts.fuse.sap_trfc_destination_standalone.CreateWilmaRequest"/>
+	<bean id="bettyRequest" class="com.redhat.quickstarts.fuse.sap_trfc_destination_standalone.CreateBettyRequest"/>
 
 	<!-- Configures the Inbound and Outbound SAP Connections -->
 	<bean id="sap-configuration"

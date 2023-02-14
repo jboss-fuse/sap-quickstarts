@@ -31,8 +31,8 @@
 
 	<!-- Instantiates processor beans which build lists of FLCUSTOMER_CREATEFROMDATA01 IDocs 
 	 	 and sets those lists in the body of the exchange's message. -->
-	<bean id="flintstoneIDocList" class="org.jboss.quickstarts.fuse.sap_qidoclist_destination_standalone.CreateFlintstoneIDocList"/>
-	<bean id="rubbleIDocList" class="org.jboss.quickstarts.fuse.sap_qidoclist_destination_standalone.CreateRubbleIDocList"/>
+	<bean id="flintstoneIDocList" class="com.redhat.quickstarts.fuse.sap_qidoclist_destination_standalone.CreateFlintstoneIDocList"/>
+	<bean id="rubbleIDocList" class="com.redhat.quickstarts.fuse.sap_qidoclist_destination_standalone.CreateRubbleIDocList"/>
 
 	<!-- Configures the Inbound and Outbound SAP Connections -->
 	<bean id="sap-configuration"

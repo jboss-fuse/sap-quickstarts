@@ -20,10 +20,10 @@
 	<description>This Quick Start demonstrates how to use the JBoss Fuse SAP Synchronous RFC Server endpoint.</description>
 	<url>http://http://www.jboss.org/products/fuse/overview/</url>
 	<parent>
-		<groupId>org.jboss.quickstarts.fuse</groupId>
+		<groupId>com.redhat.quickstarts.fuse</groupId>
 		<artifactId>sap-quickstarts-spring-boot-parent</artifactId>
 		<version>3.20.1-SNAPSHOT</version>
-		<relativePath>..</relativePath> 
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<dependencies>
