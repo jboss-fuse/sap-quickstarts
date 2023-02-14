@@ -20,10 +20,10 @@
 	<description>This Quick Start demonstrates how to use the JBoss Fuse SAP IDoc List Destination endpoint</description>
 	<url>http://http://www.jboss.org/products/fuse/overview/</url>
 	<parent>
-		<groupId>org.jboss.quickstarts.fuse</groupId>
+		<groupId>com.redhat.quickstarts.fuse</groupId>
 		<artifactId>sap-quickstarts-spring-boot-parent</artifactId>
 		<version>3.20.1-SNAPSHOT</version>
-		<relativePath>..</relativePath> 
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<dependencies>
@@ -38,6 +38,16 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-undertow</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.camel.springboot</groupId>
@@ -46,10 +56,6 @@
 		<dependency>
 			<groupId>org.fusesource</groupId>
 			<artifactId>camel-sap-starter</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.fusesource</groupId>
-			<artifactId>camel-sap</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.sap.conn.jco</groupId>

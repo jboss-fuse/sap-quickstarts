@@ -12,7 +12,7 @@
 	<url>http://http://www.jboss.org/products/fuse/overview/</url>
 
 	<parent>
-		<groupId>org.jboss.quickstarts.fuse</groupId>
+		<groupId>com.redhat.quickstarts.fuse</groupId>
 		<artifactId>sap-quickstarts-parent</artifactId>
 		<version>3.20.1-SNAPSHOT</version>
         	<relativePath>../..</relativePath>

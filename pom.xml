@@ -13,7 +13,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.jboss.quickstarts.fuse</groupId>
+	<groupId>com.redhat.quickstarts.fuse</groupId>
 	<artifactId>sap-quickstarts-parent</artifactId>
 	<version>3.20.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -75,18 +75,6 @@
 		<module>standalone/sap-trfc-destination-standalone</module>
 		<module>standalone/sap-srfc-server-standalone</module>
 		<module>standalone/sap-trfc-server-standalone</module>
-
-		<module>fuse/sap-idoc-destination-fuse</module>
-		<module>fuse/sap-idoclist-destination-fuse</module>
-		<module>fuse/sap-qidoc-destination-fuse</module>
-		<module>fuse/sap-qidoclist-destination-fuse</module>
-		<module>fuse/sap-idoclist-server-fuse</module>
-		<module>fuse/sap-qrfc-destination-fuse</module>
-		<module>fuse/sap-srfc-destination-fuse</module>
-		<module>fuse/sap-trfc-destination-fuse</module>
-		<module>fuse/sap-srfc-server-fuse</module>
-		<module>fuse/sap-trfc-server-fuse</module>
-		<module>fuse/sap-trfc-server-failover-loadbalancer-fuse</module>
 		
 		<module>spring-boot/sap-idoc-destination-spring-boot</module>
 		<module>spring-boot/sap-idoclist-destination-spring-boot</module>
@@ -98,7 +86,6 @@
 		<module>spring-boot/sap-trfc-destination-spring-boot</module>
 		<module>spring-boot/sap-srfc-server-spring-boot</module>
 		<module>spring-boot/sap-trfc-server-spring-boot</module>
-		
 	</modules>
 
 	<dependencyManagement>
@@ -107,14 +94,6 @@
             <dependency>
                 <groupId>com.redhat.camel.springboot.platform</groupId>
                 <artifactId>camel-springboot-bom</artifactId>
-                <version>${camel-spring-boot-version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.camel.springboot</groupId>
-                <artifactId>camel-spring-boot-dependencies</artifactId>
                 <version>${camel-spring-boot-version}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -132,8 +111,6 @@
 				<version>${slf4j-version}</version>
 			</dependency>
 			<!-- testing -->
-
-
 		</dependencies>
 	</dependencyManagement>
 
