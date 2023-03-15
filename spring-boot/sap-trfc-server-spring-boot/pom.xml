@@ -23,7 +23,7 @@
 		<groupId>com.redhat.quickstarts.fuse</groupId>
 		<artifactId>sap-quickstarts-spring-boot-parent</artifactId>
 		<version>3.20.1-SNAPSHOT</version>
-		<relativePath>../pom.xml</relativePath>
+		<relativePath>../../pom.xml</relativePath>
 	</parent>
 
 	<dependencies>

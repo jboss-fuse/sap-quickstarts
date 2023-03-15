@@ -28,7 +28,7 @@
 		<groupId>com.redhat.quickstarts.fuse</groupId>
 		<artifactId>sap-quickstarts-parent</artifactId>
 		<version>3.20.1-SNAPSHOT</version>
-		<relativePath>..</relativePath>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<modules>
