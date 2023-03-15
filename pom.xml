@@ -116,12 +116,6 @@
 				<scope>import</scope>
 			</dependency>
 
-			<dependency>
-				<groupId>org.fusesource</groupId>
-				<artifactId>camel-sap</artifactId>
-				<version>${camel-version}</version>
-			</dependency>
-
 			<!-- logging -->
 			<dependency>
 				<groupId>org.slf4j</groupId>
