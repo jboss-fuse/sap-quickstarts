@@ -36,8 +36,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- dependency versions -->
-		<camel-spring-boot-version>3.20.1.redhat-00028</camel-spring-boot-version>
-		<camel-version>3.20.1.redhat-00010</camel-version>
+		<camel-spring-boot-version>3.20.1.redhat-00036</camel-spring-boot-version>
+		<camel-version>3.20.1.redhat-00014</camel-version>
 		<spring-boot-version>2.7.9</spring-boot-version>
 		<slf4j-api-version>1.7.22</slf4j-api-version>
 		<slf4j-version>1.7.22</slf4j-version>
@@ -100,12 +100,26 @@
 				<scope>import</scope>
 			</dependency>
 
+                        <dependency>
+                                <groupId>org.apache.camel.springboot</groupId>
+                                <artifactId>camel-spring-boot-bom</artifactId>
+                                <version>${camel-spring-boot-version}</version>
+                                <type>pom</type>
+                                <scope>import</scope>
+                        </dependency>
+
 			<dependency>
 				<groupId>org.apache.camel</groupId>
 				<artifactId>camel-bom</artifactId>
 				<version>${camel-version}</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.fusesource</groupId>
+				<artifactId>camel-sap</artifactId>
+				<version>${camel-version}</version>
 			</dependency>
 
 			<!-- logging -->
