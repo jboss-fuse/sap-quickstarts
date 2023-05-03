@@ -1,1 +1,0 @@
-Place your copies of the IDoc and JCo libraries and the JCo native library for your OS platform in this directory.

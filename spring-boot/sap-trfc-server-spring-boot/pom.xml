@@ -57,20 +57,6 @@
 			<groupId>org.fusesource</groupId>
 			<artifactId>camel-sap-starter</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.sap.conn.jco</groupId>
-			<artifactId>sapjco3</artifactId>
-			<version>${sapjco3-version}</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/lib/sapjco3.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.sap.conn.idoc</groupId>
-			<artifactId>sapidoc3</artifactId>
-			<version>${sapidoc3-version}</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/lib/sapidoc3.jar</systemPath>
-		</dependency>
 	</dependencies>
 	<build>
 		<defaultGoal>spring-boot:run</defaultGoal>
@@ -82,7 +68,10 @@
 		</resources>
 
 		<plugins>
-
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>

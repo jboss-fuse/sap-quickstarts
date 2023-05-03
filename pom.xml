@@ -31,6 +31,8 @@
 	</licenses>
 
 	<properties>
+		<lib.directory>${basedir}/lib</lib.directory>
+		<spring-boot.run.directories>${lib.directory}/*</spring-boot.run.directories>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -137,7 +139,48 @@
 		</resources>
 		<pluginManagement>
 			<plugins>
-
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<executions>
+						<execution>
+							<id>copy-sap-libs</id>
+							<phase>process-sources</phase>
+							<goals>
+								<goal>copy</goal>
+							</goals>
+							<configuration>
+								<stripVersion>true</stripVersion>
+								<outputDirectory>${lib.directory}</outputDirectory>
+								<artifactItems>
+									<artifactItem>
+										<groupId>com.sap.conn.jco</groupId>
+										<artifactId>sapjco3</artifactId>
+										<version>${sapjco3-version}</version>
+										<type>${envType}</type>
+										<classifier>${envClassifier}</classifier>
+										<overWrite>true</overWrite>
+										<destFileName>${native.lib.filename}.${envType}</destFileName>
+									</artifactItem>
+									<artifactItem>
+										<groupId>com.sap.conn.jco</groupId>
+										<artifactId>sapjco3</artifactId>
+										<version>${sapjco3-version}</version>
+										<overWrite>true</overWrite>
+										<destFileName>sapjco3.jar</destFileName>
+									</artifactItem>
+									<artifactItem>
+										<groupId>com.sap.conn.idoc</groupId>
+										<artifactId>sapidoc3</artifactId>
+										<version>${sapidoc3-version}</version>
+										<overWrite>true</overWrite>
+										<destFileName>sapidoc3.jar</destFileName>
+									</artifactItem>
+								</artifactItems>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
@@ -201,6 +244,19 @@
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-maven-plugin</artifactId>
 					<version>${spring-boot-version}</version>
+					<configuration>
+					<!-- TODO: remove this once camel-sap-starter doesn't include these in transitive dependencies -->
+						<excludes>
+							<exclude>
+								<groupId>com.sap.conn.idoc</groupId>
+								<artifactId>sapidoc3</artifactId>
+							</exclude>
+							<exclude>
+								<groupId>com.sap.conn.jco</groupId>
+								<artifactId>sapjco3</artifactId>
+							</exclude>
+						</excludes>
+					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
@@ -305,6 +361,202 @@
 			<id>snapshots</id>
 			<properties>
 				<snapshop-build>redhat-7.0.0.redhat-SNAPSHOT</snapshop-build>
+			</properties>
+		</profile>
+		<profile>
+			<id>win-i386</id>
+			<activation>
+				<os>
+					<name>windows</name>
+					<arch>i386</arch>
+				</os>
+			</activation>
+			<properties>
+				<envClassifier>win-i686</envClassifier>
+				<envType>dll</envType>
+				<native.lib.filename>sapjco3</native.lib.filename>
+			</properties>
+		</profile>
+		<profile>
+			<id>win-x86</id>
+			<activation>
+				<os>
+					<name>windows</name>
+					<arch>x86</arch>
+				</os>
+			</activation>
+			<properties>
+				<envClassifier>win-i686</envClassifier>
+				<envType>dll</envType>
+				<native.lib.filename>sapjco3</native.lib.filename>
+			</properties>
+		</profile>
+		<profile>
+			<id>win-x86_64</id>
+			<activation>
+				<os>
+					<name>windows</name>
+					<arch>x86_64</arch>
+				</os>
+			</activation>
+			<properties>
+				<envClassifier>win-x86_64</envClassifier>
+				<envType>dll</envType>
+				<native.lib.filename>sapjco3</native.lib.filename>
+			</properties>
+		</profile>
+		<profile>
+			<id>win10-x86_64</id>
+			<activation>
+				<os>
+					<name>windows 10</name>
+					<arch>x86_64</arch>
+				</os>
+			</activation>
+			<properties>
+				<envClassifier>win-x86_64</envClassifier>
+				<envType>dll</envType>
+				<native.lib.filename>sapjco3</native.lib.filename>
+			</properties>
+		</profile>
+		<profile>
+			<id>win32-amd64</id>
+			<activation>
+				<os>
+					<name>windows</name>
+					<arch>amd64</arch>
+				</os>
+			</activation>
+			<properties>
+				<envClassifier>win-x86_64</envClassifier>
+				<envType>dll</envType>
+				<native.lib.filename>sapjco3</native.lib.filename>
+			</properties>
+		</profile>
+		<profile>
+			<id>win10-amd64</id>
+			<activation>
+				<os>
+					<name>windows 10</name>
+					<arch>amd64</arch>
+				</os>
+			</activation>
+			<properties>
+				<envClassifier>win-x86_64</envClassifier>
+				<envType>dll</envType>
+				<native.lib.filename>sapjco3</native.lib.filename>
+			</properties>
+		</profile>
+		<profile>
+			<id>linux-i386</id>
+			<activation>
+				<os>
+					<name>linux</name>
+					<arch>i386</arch>
+				</os>
+			</activation>
+			<properties>
+				<envClassifier>linux-i686</envClassifier>
+				<envType>so</envType>
+				<native.lib.filename>libsapjco3</native.lib.filename>
+			</properties>
+		</profile>
+		<profile>
+			<id>linux-x86</id>
+			<activation>
+				<os>
+					<name>linux</name>
+					<arch>x86</arch>
+				</os>
+			</activation>
+			<properties>
+				<envClassifier>linux-i686</envClassifier>
+				<envType>so</envType>
+				<native.lib.filename>libsapjco3</native.lib.filename>
+			</properties>
+		</profile>
+		<profile>
+			<id>linux-x86_64</id>
+			<activation>
+				<os>
+					<name>linux</name>
+					<arch>x86_64</arch>
+				</os>
+			</activation>
+			<properties>
+				<envClassifier>linux-x86_64</envClassifier>
+				<envType>so</envType>
+				<native.lib.filename>libsapjco3</native.lib.filename>
+			</properties>
+		</profile>
+		<profile>
+			<id>linux-amd64</id>
+			<activation>
+				<os>
+					<name>linux</name>
+					<arch>amd64</arch>
+				</os>
+			</activation>
+			<properties>
+				<envClassifier>linux-x86_64</envClassifier>
+				<envType>so</envType>
+				<native.lib.filename>libsapjco3</native.lib.filename>
+			</properties>
+		</profile>
+		<profile>
+			<id>macosx-i386</id>
+			<activation>
+				<os>
+					<name>mac os x</name>
+					<arch>i386</arch>
+				</os>
+			</activation>
+			<properties>
+				<envClassifier>macosx-i686</envClassifier>
+				<envType>dylib</envType>
+				<native.lib.filename>libsapjco3</native.lib.filename>
+			</properties>
+		</profile>
+		<profile>
+			<id>macosx-x86</id>
+			<activation>
+				<os>
+					<name>mac os x</name>
+					<arch>x86</arch>
+				</os>
+			</activation>
+			<properties>
+				<envClassifier>macosx-i686</envClassifier>
+				<envType>dylib</envType>
+				<native.lib.filename>libsapjco3</native.lib.filename>
+			</properties>
+		</profile>
+		<profile>
+			<id>macosx-x86_64</id>
+			<activation>
+				<os>
+					<name>mac os x</name>
+					<arch>x86_64</arch>
+				</os>
+			</activation>
+			<properties>
+				<envClassifier>macosx-x86_64</envClassifier>
+				<envType>dylib</envType>
+				<native.lib.filename>libsapjco3</native.lib.filename>
+			</properties>
+		</profile>
+		<profile>
+			<id>macosx-amd64</id>
+			<activation>
+				<os>
+					<name>mac os x</name>
+					<arch>amd64</arch>
+				</os>
+			</activation>
+			<properties>
+				<envClassifier>macosx-x86_64</envClassifier>
+				<envType>dylib</envType>
+				<native.lib.filename>libsapjco3</native.lib.filename>
 			</properties>
 		</profile>
 	</profiles>

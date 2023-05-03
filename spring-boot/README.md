@@ -72,5 +72,40 @@ To run these quick starts you will need:
 * Maven 3.6.2 or higher
 * JDK 11
 * Red Hat Build of Camel Spring Boot
-* SAP JCo3 and IDoc3 libraries (sapjco3.jar, sapidoc3.jar and JCo native library for your OS platform)
+* SAP JCo3 and IDoc3 libraries (sapjco3.jar, sapidoc3.jar and JCo native library for your OS platform) installed in your local Maven repository (see how to at the end)
 * SAP instance with [Flight Data Application](http://help.sap.com/saphelp_erp60_sp/helpdata/en/db/7c623cf568896be10000000a11405a/content.htm) setup.
+
+---
+Install SAP libraries in your local Maven repository
+---
+
+To install your three SAP libraries in your Maven repository you will need to run three commands using Maven:
+
+
+mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.4 -Dpackaging=jar -Dfile=sapjco3.jar
+
+mvn install:install-file -DgroupId=com.sap.conn.idoc -DartifactId=sapidoc3 -Dversion=3.1.1 -Dpackaging=jar -Dfile=sapidoc3.jar
+
+Installing the JCo native library will depend on the Operating System and architecture you are running. For example: 
+
+for Linux x86 64 bit:
+
+mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.4 -Dclassifier=linux-x86_64 -Dpackaging=so -Dfile=libsapjco3.so
+
+MacOS 64 bit:
+
+mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.4 -Dclassifier=macosx-x86_64 -Dpackaging=dylib -Dfile=libsapjco3.dylib
+
+Windows 64 bit
+
+mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.4 -Dclassifier=win-x86_64 -Dpackaging=dll -Dfile=sapjco3.dll
+
+For more architectures please see the [pom.xml](pom.xml#L376)
+
+When using different version please also change the version in [pom.xml](pom.xml#L46)
+
+
+
+
+
+
