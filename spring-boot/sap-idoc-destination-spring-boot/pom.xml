@@ -22,7 +22,7 @@
 	<parent>
 		<groupId>com.redhat.quickstarts.fuse</groupId>
 		<artifactId>sap-quickstarts-parent</artifactId>
-		<version>3.20.1-SNAPSHOT</version>
+		<version>4.0.0-M3-SNAPSHOT</version>
 		<relativePath>../..</relativePath>
 	</parent>
 
