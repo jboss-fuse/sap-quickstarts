@@ -25,6 +25,9 @@
 		<version>3.20.1-SNAPSHOT</version>
 		<relativePath>../..</relativePath>
 	</parent>
+	<properties>
+		<main.class>com.redhat.quickstarts.fuse.sap_idoc_destination_spring_boot.Application</main.class>
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -65,6 +68,15 @@
 			<systemPath>${basedir}/lib/sapjco3.jar</systemPath>
 		</dependency>
 		<dependency>
+			<groupId>com.sap.conn.jco</groupId>
+			<artifactId>sapjco3</artifactId>
+			<version>${sapjco3-version}</version>
+			<classifier>linux-i686</classifier>
+			<type>so</type>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/libsapjco3.so</systemPath>
+		</dependency>
+		<dependency>
 			<groupId>com.sap.conn.idoc</groupId>
 			<artifactId>sapidoc3</artifactId>
 			<version>${sapidoc3-version}</version>
@@ -80,9 +92,7 @@
 				<filtering>true</filtering>
 			</resource>
 		</resources>
-
 		<plugins>
-
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
@@ -93,6 +103,25 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+    				<outputDirectory>${project.build.directory}/classes</outputDirectory>
+					<resources>
+						<resource>
+							<directory>src/main/resources</directory>
+							<includes>
+								<include>application.properties</include>
+							</includes>
+							<filtering>true</filtering>
+						</resource>
+						<resource>
+							<directory>src/main/resources</directory>
+							<includes>
+								<include>classpath</include>
+							</includes>
+							<filtering>true</filtering>
+						</resource>
+					</resources>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.camel</groupId>
@@ -109,8 +138,73 @@
 					</execution>
 				</executions>
 			</plugin>
-
 		</plugins>
-
 	</build>
+	<profiles>
+		<profile>
+			<id>openshift</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.eclipse.jkube</groupId>
+						<artifactId>openshift-maven-plugin</artifactId>
+						<configuration>
+							<resources>
+								<controller>
+									<env>
+										<AB_PROMETHEUS_OFF>true</AB_PROMETHEUS_OFF>
+										<AB_JOLOKIA_OFF>true</AB_JOLOKIA_OFF>
+										<AB_ENABLED>false</AB_ENABLED>
+										<JAVA_MAIN_CLASS>org.springframework.boot.loader.PropertiesLauncher</JAVA_MAIN_CLASS>
+										<JAVA_OPTIONS>-Dloader.main=${main.class}</JAVA_OPTIONS>
+									</env>
+								</controller>
+							</resources>
+							<images>
+								<image>
+									<name>camel/actuator-http-metric</name>
+									<build>
+										<from>quay.io/jkube/jkube-java:0.0.19</from>
+										<assembly>
+											<mode>dir</mode>
+											<targetDir>/deployments</targetDir>
+											<layers>
+												<layer>
+													<id>lib</id>
+													<fileSets>
+														<fileSet>
+															<directory>${project.build.directory}/classes</directory>
+															<outputDirectory>.</outputDirectory>
+															<fileMode>0640</fileMode>
+															<includes>classpath</includes>
+														</fileSet>
+														<fileSet>
+															<directory>${project.basedir}/lib</directory>
+															<outputDirectory>lib</outputDirectory>
+															<fileMode>0640</fileMode>
+														</fileSet>
+													</fileSets>
+												</layer>
+											</layers>
+										</assembly>
+										<ports>
+											<port>8080</port>
+										</ports>
+									</build>
+								</image>
+							</images>
+						</configuration>
+						<executions>
+							<execution>
+								<goals>
+									<goal>resource</goal>
+									<goal>build</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
