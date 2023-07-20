@@ -1,0 +1,1 @@
+/deployments/${project.build.finalName}.jar:/deployments/lib/sapidoc3.jar:/deployments/lib/sapjco3.jar
