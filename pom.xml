@@ -15,7 +15,7 @@
 
 	<groupId>com.redhat.quickstarts.fuse</groupId>
 	<artifactId>sap-quickstarts-parent</artifactId>
-	<version>4.0.0-M3-SNAPSHOT</version>
+	<version>4.0.0-RC2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>SAP Quickstarts Parent</name>
@@ -36,8 +36,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- dependency versions -->
-		<camel-spring-boot-version>4.0.0.M3-redhat-00005</camel-spring-boot-version>
-		<camel-version>4.0.0.M3-redhat-00001</camel-version>
+		<camel-spring-boot-version>4.0.0.RC2-redhat-00001</camel-spring-boot-version>
+		<camel-version>4.0.0.RC2-redhat-00002</camel-version>
 		<spring-boot-version>3.0.6</spring-boot-version>
 		<slf4j-api-version>2.0.7</slf4j-api-version>
 		<sapjco3-version>3.1.4</sapjco3-version>
@@ -46,7 +46,7 @@
 		<!-- plugin versions -->
 		<maven-compiler-plugin-version>3.10.1</maven-compiler-plugin-version>
 		<maven-resources-plugin-version>3.0.2</maven-resources-plugin-version>
-		<camel-maven-plugin-version>4.0.0-M3</camel-maven-plugin-version>
+		<camel-maven-plugin-version>4.0.0-RC2</camel-maven-plugin-version>
 		<maven-bundle-plugin-version>3.3.0</maven-bundle-plugin-version>
 		<build-helper-maven-plugin-version>3.0.0</build-helper-maven-plugin-version>
 		<fabric8-maven-plugin-version>3.5.26</fabric8-maven-plugin-version>
