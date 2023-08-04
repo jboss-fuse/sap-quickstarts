@@ -182,6 +182,13 @@ To build and run the quick start:
     iii.	Execute the transaction to send the requests (Edit > Execute LUW).  
 * In the console observe the IDoc received by the endpoint.  
 
+Deployment to OpenShift
+-----------------------
+
+To deploy the quickstart to OpenShift
+
+1. Run 'mvn -Popenshift oc:deploy'
+
 Stopping the Quickstart
 -----------------------
 

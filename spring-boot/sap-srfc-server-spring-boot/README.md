@@ -137,6 +137,13 @@ To build and run the quick start:
 * In the console observe the request and response received and returned by the endpoint.  
 * Compare this response with the received data displayed by the ABAP program.   
 
+Deployment to OpenShift
+-----------------------
+
+To deploy the quickstart to OpenShift
+
+1. Run 'mvn -Popenshift oc:deploy'
+
 Stopping the Quickstart
 -----------------------
 

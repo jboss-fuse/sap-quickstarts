@@ -154,9 +154,9 @@
 							</resources>
 							<images>
 								<image>
-									<name>camel/actuator-http-metric</name>
+									<name>camel/${project.artifactId}</name>
 									<build>
-										<from>quay.io/jkube/jkube-java:0.0.19</from>
+										<from>${jkube.generator.from}</from>
 										<assembly>
 											<mode>dir</mode>
 											<targetDir>/deployments</targetDir>

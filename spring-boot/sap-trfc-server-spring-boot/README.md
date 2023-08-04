@@ -147,6 +147,13 @@ To build and run the quick start:
 * Invoke the camel route from SAP:  Run the `ZBAPI_FLCUST_CREATEFROMDATA` program.  
 * In the console observe the requests received by the endpoint.  
 
+Deployment to OpenShift
+-----------------------
+
+To deploy the quickstart to OpenShift
+
+1. Run 'mvn -Popenshift oc:deploy'
+
 Stopping the Quickstart
 -----------------------
 
