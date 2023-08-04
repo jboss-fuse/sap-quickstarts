@@ -106,6 +106,13 @@ To build and run the quick start:
 * Using the SAP GUI, run transaction `SE16`, Data Browser, and display the contents of the table `SCUSTOM`.
 * Search the table (Edit > Find..) for the newly created Customer records: `Fred Flintstone`, `Wilma Flintstone`, `Barney Rubble`, and `Betty Rubble`. 
 
+Deployment to OpenShift
+-----------------------
+
+To deploy the quickstart to OpenShift
+
+1. Run 'mvn -Popenshift oc:deploy'
+
 Stopping the Quickstart
 -----------------------
 

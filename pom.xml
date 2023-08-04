@@ -51,6 +51,9 @@
 		<build-helper-maven-plugin-version>3.0.0</build-helper-maven-plugin-version>
 		<fabric8-maven-plugin-version>3.5.26</fabric8-maven-plugin-version>
 
+		<!-- OpenShift Deployment -->
+		<jkube.generator.from>quay.io/jkube/jkube-java:0.0.19</jkube.generator.from>
+
 		<!-- SAP Instance Configuration Configuration Parameters -->
 		<!-- *** Please enter the connection property values for your SAP Instance *** -->
 		<jco.client.ashost>example.com</jco.client.ashost>

@@ -63,6 +63,13 @@ To build and run the quick start:
 * Run `mvn spring-boot:run` to start the Camel runtime.
 * In the console observe the response returned by the endpoint.
 
+Deployment to OpenShift
+-----------------------
+
+To deploy the quickstart to OpenShift
+
+1. Run 'mvn -Popenshift oc:deploy'
+
 Stopping the Quickstart
 -----------------------
 
