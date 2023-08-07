@@ -142,10 +142,10 @@ Build and Run the Quickstart
 To build and run the quick start:
 
 1. Change your working directory to the `sap-trfc-server-spring-boot` directory.
-* Run `mvn clean install` to build the quick start.
-* Run `mvn spring-boot:run` to start the Camel runtime.
-* Invoke the camel route from SAP:  Run the `ZBAPI_FLCUST_CREATEFROMDATA` program.  
-* In the console observe the requests received by the endpoint.  
+2. Run `mvn clean install` to build the quick start or `mvn clean install -Pjar` to build a runnable jar.
+3. Run `mvn spring-boot:run` or `java -jar -Dloader.path=lib/ target/<jar_file>.jar` to start the Camel runtime.
+4. Invoke the camel route from SAP:  Run the `ZBAPI_FLCUST_CREATEFROMDATA` program.  
+5. In the console observe the requests received by the endpoint.  
 
 Deployment to OpenShift
 -----------------------

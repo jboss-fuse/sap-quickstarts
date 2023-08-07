@@ -61,11 +61,11 @@ Build and Run the Quickstart
 To build and run the quick start:
 
 1. Change your working directory to the `sap-trfc-destination-spring-boot` directory.
-* Run `mvn clean install` to build the quick start.
-* Run `mvn spring-boot:run` to start the Camel runtime.
-* In the console observe the contents of the requests processed by the route.
-* Using the SAP GUI, run transaction `SE16`, Data Browser, and display the contents of the table `SCUSTOM`.
-* Search the table (Edit > Find..) for the newly created Customer records: `Fred Flintstone`, `Wilma Flintstone`, `Barney Rubble`, and `Betty Rubble`. 
+2. Run `mvn clean install` to build the quick start or `mvn clean install -Pjar` to build a runnable jar.
+3. Run `mvn spring-boot:run` or `java -jar -Dloader.path=lib/ target/<jar_file>.jar` to start the Camel runtime.
+4. In the console observe the contents of the requests processed by the route.
+5. Using the SAP GUI, run transaction `SE16`, Data Browser, and display the contents of the table `SCUSTOM`.
+6. Search the table (Edit > Find..) for the newly created Customer records: `Fred Flintstone`, `Wilma Flintstone`, `Barney Rubble`, and `Betty Rubble`. 
 
 Deployment to OpenShift
 -----------------------

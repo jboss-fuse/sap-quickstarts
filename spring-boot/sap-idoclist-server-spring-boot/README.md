@@ -172,15 +172,15 @@ Build and Run the Quickstart
 To build and run the quick start:
 
 1. Change your working directory to the `sap-idoclist-server-spring-boot` directory.
-* Run `mvn clean install` to build the quick start.
-* Run `mvn spring-boot:run` to start the Camel runtime.
-* Invoke the camel route from SAP:  
+2. Run `mvn clean install` to build the quick start or `mvn clean install -Pjar` to build a runnable jar.
+3. Run `mvn spring-boot:run` or `java -jar -Dloader.path=lib/ target/<jar_file>.jar` to start the Camel runtime.
+4. Invoke the camel route from SAP:  
   a.Run the `ZFLCUSTOMER_CREATEFROMDATA01` program.  
   b.Using the SAP GUI, run transaction `SM58`, the Transactional RFC Monitor:   
     i. 		Display the outstanding transactions (Program > Execute).  
     ii.		Select the transaction destined for the `QUICKSTART`.  
     iii.	Execute the transaction to send the requests (Edit > Execute LUW).  
-* In the console observe the IDoc received by the endpoint.  
+5. In the console observe the IDoc received by the endpoint.  
 
 Deployment to OpenShift
 -----------------------

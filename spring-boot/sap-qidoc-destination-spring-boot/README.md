@@ -98,15 +98,15 @@ Build and Run the Quickstart
 To build and run the quick start:
 
 1. Change your working directory to the `sap-qidoc-destination-spring-boot` directory.
-* Run `mvn clean install` to build the quick start.
-* Run `mvn spring-boot:run` to start the Camel runtime.
-* In the console observe the contents of the IDoc processed by the route.
-* Execute the queued IDocs waiting in the inbound queue `QUICKSTARTQUEUE`. Using the SAP GUI, run transaction `SMQ2`, the Inbound Queue qRFC Monitor:  
+2. Run `mvn clean install` to build the quick start or `mvn clean install -Pjar` to build a runnable jar.
+3. Run `mvn spring-boot:run` or `java -jar -Dloader.path=lib/ target/<jar_file>.jar` to start the Camel runtime.
+4. In the console observe the contents of the IDoc processed by the route.
+5. Execute the queued IDocs waiting in the inbound queue `QUICKSTARTQUEUE`. Using the SAP GUI, run transaction `SMQ2`, the Inbound Queue qRFC Monitor:  
     a. Select the `QUICKSTARTQUEUE` queue.  
     b. Display the queue contents (Edit > Display Selection).  
     c. Select the entry for your Client connection and activate the queue (Edit > Activate).  
-* Using the SAP GUI, run transaction `SE16`, Data Browser, and display the contents of the table `SCUSTOM`.
-* Search the table (Edit > Find..) for the newly created Customer records: `Fred Flintstone`, `Wilma Flintstone`, `Barney Rubble`, and `Betty Rubble`. 
+6. Using the SAP GUI, run transaction `SE16`, Data Browser, and display the contents of the table `SCUSTOM`.
+7. Search the table (Edit > Find..) for the newly created Customer records: `Fred Flintstone`, `Wilma Flintstone`, `Barney Rubble`, and `Betty Rubble`. 
 
 Deployment to OpenShift
 -----------------------
