@@ -15,7 +15,7 @@
 
 	<groupId>com.redhat.quickstarts.fuse</groupId>
 	<artifactId>sap-quickstarts-parent</artifactId>
-	<version>4.0.0-SNAPSHOT</version>
+	<version>4.4.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>SAP Quickstarts Parent</name>
@@ -46,7 +46,7 @@
 		<!-- plugin versions -->
 		<maven-compiler-plugin-version>3.10.1</maven-compiler-plugin-version>
 		<maven-resources-plugin-version>3.0.2</maven-resources-plugin-version>
-		<camel-maven-plugin-version>4.0.0</camel-maven-plugin-version>
+		<camel-maven-plugin-version>4.4.0</camel-maven-plugin-version>
 		<maven-bundle-plugin-version>3.3.0</maven-bundle-plugin-version>
 		<build-helper-maven-plugin-version>3.0.0</build-helper-maven-plugin-version>
 		<fabric8-maven-plugin-version>3.5.26</fabric8-maven-plugin-version>
