@@ -155,7 +155,7 @@
 										<AB_PROMETHEUS_OFF>true</AB_PROMETHEUS_OFF>
 										<AB_JOLOKIA_OFF>true</AB_JOLOKIA_OFF>
 										<AB_ENABLED>false</AB_ENABLED>
-										<JAVA_MAIN_CLASS>org.springframework.boot.loader.PropertiesLauncher</JAVA_MAIN_CLASS>
+										<JAVA_MAIN_CLASS>org.springframework.boot.loader.launch.JarLauncher</JAVA_MAIN_CLASS>
 										<JAVA_OPTIONS>-Dloader.main=${main.class}</JAVA_OPTIONS>
 									</env>
 								</controller>
