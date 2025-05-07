@@ -22,11 +22,11 @@
     <parent>
         <groupId>org.apache.camel.springboot.example</groupId>
         <artifactId>camel-example-spring-boot-servicecall</artifactId>
-        <version>4.10.3-SNAPSHOT</version>
+        <version>4.10.3.redhat-00016</version>
     </parent>
     <artifactId>camel-example-spring-boot-servicecall-consumer</artifactId>
     <groupId>org.apache.camel.springboot.example</groupId>
-    <version>4.10.3-SNAPSHOT</version>
+    <version>4.10.3.redhat-00016</version>
     <name>Camel SB Examples :: ServiceCall :: Consumer</name>
     <description>An example showing how to work with Camel ServiceCall EIP and Spring Boot (Consumer)</description>
     <properties>

@@ -22,11 +22,11 @@
     <parent>
         <groupId>org.apache.camel.springboot.example</groupId>
         <artifactId>camel-example-spring-boot-servicecall</artifactId>
-        <version>4.10.3-SNAPSHOT</version>
+        <version>4.10.3.redhat-00016</version>
     </parent>
     <artifactId>camel-example-spring-boot-servicecall-services</artifactId>
     <groupId>org.apache.camel.springboot.example</groupId>
-    <version>4.10.3-SNAPSHOT</version>
+    <version>4.10.3.redhat-00016</version>
     <name>Camel SB Examples :: ServiceCall :: Services</name>
     <description>An example showing how to work with Camel ServiceCall EIP and Spring Boot (Services)</description>
     <properties>
@@ -69,13 +69,9 @@
         <!-- xml dsl -->
         <dependency>
             <groupId>org.apache.camel.springboot</groupId>
-            <artifactId>camel-xml-io-dsl-starter</artifactId>
-        </dependency>
-        <!-- monitoring -->
-        <dependency>
-            <groupId>org.apache.camel.springboot</groupId>
             <artifactId>camel-management-starter</artifactId>
         </dependency>
+        <!-- monitoring -->
         <dependency>
             <groupId>org.apache.camel.springboot</groupId>
             <artifactId>camel-micrometer-starter</artifactId>
@@ -84,17 +80,18 @@
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-registry-prometheus</artifactId>
         </dependency>
-        <!-- test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- test -->
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-test-spring-junit5</artifactId>
             <scope>test</scope>
         </dependency>
+        
     </dependencies>
     <build>
         <plugins>
