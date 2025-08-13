@@ -152,7 +152,7 @@
 							</resources>
 							<images>
 								<image>
-									<name>camel/${project.artifactId}</name>
+									<name>${project.artifactId}</name>
 									<build>
 										<from>${jkube.generator.from}</from>
 										<assembly>
