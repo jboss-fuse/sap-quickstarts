@@ -133,6 +133,9 @@
 	<profiles>
 		<profile>
 			<id>openshift</id>
+			<properties>
+					<jkube.build.switchToDeployment>true</jkube.build.switchToDeployment>
+			</properties>
 			<build>
 				<plugins>
 					<plugin>
