@@ -40,8 +40,8 @@
 		<camel-version>4.14.0.redhat-00003</camel-version>
 		<spring-boot-version>3.5.5</spring-boot-version>
 		<slf4j-api-version>2.0.17</slf4j-api-version>
-		<sapjco3-version>3.1.4</sapjco3-version>
-		<sapidoc3-version>3.1.1</sapidoc3-version>
+		<sapjco3-version>3.1.12</sapjco3-version>
+		<sapidoc3-version>3.1.4</sapidoc3-version>
 
 		<!-- plugin versions -->
 		<maven-compiler-plugin-version>3.10.1</maven-compiler-plugin-version>
@@ -237,17 +237,6 @@
 				<enabled>true</enabled>
 			</releases>
 		</repository>
-		<repository>
-			<id>jboss-fuse-snapshot</id>
-			<name>JBoss Fuse Snapshot Repository</name>
-			<url>https://repository.jboss.org/nexus/content/groups/fs-public-snapshots/</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</repository>
 	</repositories>
 
 	<pluginRepositories>
@@ -297,12 +286,4 @@
 		</pluginRepository>
 	</pluginRepositories>
 
-	<profiles>
-		<profile>
-			<id>snapshots</id>
-			<properties>
-				<snapshop-build>redhat-7.0.0.redhat-SNAPSHOT</snapshop-build>
-			</properties>
-		</profile>
-	</profiles>
 </project>
