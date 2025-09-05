@@ -20,7 +20,7 @@
 
 	<name>SAP Quickstarts Parent</name>
 	<description>Parent for SAP Quickstarts</description>
-	<url>http://www.jboss.org/products/fuse</url>
+	<url>https://developers.redhat.com/products/red-hat-build-of-apache-camel/overview</url>
 
 	<licenses>
 		<license>
@@ -31,8 +31,8 @@
 	</licenses>
 
 	<properties>
-        <lib.directory>${basedir}/lib</lib.directory>
-        <spring-boot.run.directories>${lib.directory}/*</spring-boot.run.directories>
+		<lib.directory>${basedir}/lib</lib.directory>
+		<spring-boot.run.directories>${lib.directory}/*</spring-boot.run.directories>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -242,7 +242,7 @@
 					<artifactId>spring-boot-maven-plugin</artifactId>
 					<version>${spring-boot-version}</version>
 					<configuration>
-					<!-- TODO: remove this once camel-sap-starter doesn't include these in transitive dependencies -->
+						<!-- TODO: remove this once camel-sap-starter doesn't include these in transitive dependencies -->
 						<excludes>
 							<exclude>
 								<groupId>com.sap.conn.idoc</groupId>
@@ -264,17 +264,6 @@
 			<id>jboss-fuse-ea</id>
 			<name>JBoss Fuse Early Access Repository</name>
 			<url>https://repository.jboss.org/nexus/content/groups/ea/</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</repository>
-		<repository>
-			<id>jboss-fuse-public</id>
-			<name>JBoss Fuse Public Repository</name>
-			<url>https://repository.jboss.org/nexus/content/groups/fs-public/</url>
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
@@ -308,17 +297,6 @@
 			</releases>
 		</pluginRepository>
 		<pluginRepository>
-			<id>jboss-fuse-public</id>
-			<name>JBoss Fuse Public Repository</name>
-			<url>https://repository.jboss.org/nexus/content/groups/fs-public/</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</pluginRepository>
-		<pluginRepository>
 			<id>jboss-fuse-ga</id>
 			<name>JBoss Fuse Community GA Release Repository</name>
 			<url>https://maven.repository.redhat.com/ga/</url>
@@ -343,12 +321,6 @@
 	</pluginRepositories>
 
 	<profiles>
-		<profile>
-			<id>snapshots</id>
-			<properties>
-				<snapshop-build>redhat-7.0.0.redhat-SNAPSHOT</snapshop-build>
-			</properties>
-		</profile>
 		<profile>
 			<id>win-i386</id>
 			<activation>
@@ -541,6 +513,20 @@
 			</activation>
 			<properties>
 				<envClassifier>macosx-x86_64</envClassifier>
+				<envType>dylib</envType>
+				<native.lib.filename>libsapjco3</native.lib.filename>
+			</properties>
+		</profile>
+		<profile>
+			<id>macosx-arm64</id>
+			<activation>
+				<os>
+					<name>mac os x</name>
+					<arch>aarch64</arch>
+				</os>
+			</activation>
+			<properties>
+				<envClassifier>osx-aarch_64</envClassifier>
 				<envType>dylib</envType>
 				<native.lib.filename>libsapjco3</native.lib.filename>
 			</properties>
