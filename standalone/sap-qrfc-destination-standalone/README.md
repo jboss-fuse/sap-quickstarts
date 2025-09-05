@@ -16,7 +16,7 @@ Source: <http://github.com/jboss-fuse/sap-quickstarts/>
 What is it?  
 -----------  
 
-This quick start shows how to integrate Apache Camel with SAP using the JBoss Fuse SAP Queued Remote Function Call Destination Camel component. This component extends the capabilities of the JBoss Fuse Transactional Remote Function Call Destination camel component by adding **IN-ORDER** delivery and processing guarantees to the delivery and processing of requests through its endpoints. This component and its endpoints should be used in cases where a series of requests depend on each other and must be delivered to and processed by the receiving SAP system in the same order that they were sent (**AT-MOST-ONCE** and **IN-ORDER**). The component accomplishes the AT-MOST-ONCE delivery guarantees using the same mechanisms as the JBoss Fuse SAP Transactional Remote Function Call Destination Camel component. The ordering guarantee is accomplished by serializing the requests in the order they are received by the SAP system to an *Inbound Queue*. Inbound queues are processed by the **QIN Scheduler** within SAP. When the inbound queue is *activated*, the QIN Scheduler which execute in order the queue's requests.   
+This quick start shows how to integrate Apache Camel with SAP using the Red Hat build of Apache Camel SAP Queued Remote Function Call Destination Camel component. This component extends the capabilities of the JBoss Fuse Transactional Remote Function Call Destination camel component by adding **IN-ORDER** delivery and processing guarantees to the delivery and processing of requests through its endpoints. This component and its endpoints should be used in cases where a series of requests depend on each other and must be delivered to and processed by the receiving SAP system in the same order that they were sent (**AT-MOST-ONCE** and **IN-ORDER**). The component accomplishes the AT-MOST-ONCE delivery guarantees using the same mechanisms as the Red Hat build of Apache Camel SAP Transactional Remote Function Call Destination Camel component. The ordering guarantee is accomplished by serializing the requests in the order they are received by the SAP system to an *Inbound Queue*. Inbound queues are processed by the **QIN Scheduler** within SAP. When the inbound queue is *activated*, the QIN Scheduler which execute in order the queue's requests.   
 
 This quick start contains a route with an initial timer endpoint which triggers and executes that route once. The route uses processor beans to build requests to the `CreateFromData` method of the `FlightCustomer` BAPI to create flight customer records in SAP. These requests are routed to `sap-qrfc-destination` endpoints which use the qRFC protocol to send these requests to SAP to invoke the BAPI method. The route logs to the console the serialized contents of the request messages it sends. These requests are serializes within SAP on the inbound queue `QUICKSTARTQUEUE`.  
 
@@ -24,14 +24,14 @@ This quick start contains a route with an initial timer endpoint which triggers 
 
 In studying this quick start you will learn:
 
-* How to configure the Camel runtime environment in order to deploy the JBoss Fuse SAP Queued Remote Function Call Destination Camel component. 
-* How to define a Camel route containing the JBoss Fuse SAP Queued Remote Function Call Destination Camel component using the Spring XML syntax.
-* How to use the JBoss Fuse SAP Queued Remote Function Call Destination Camel component to reliably update data in SAP. 
+* How to configure the Camel runtime environment in order to deploy the Red Hat build of Apache Camel SAP Queued Remote Function Call Destination Camel component. 
+* How to define a Camel route containing the Red Hat build of Apache Camel SAP Queued Remote Function Call Destination Camel component using the Spring XML syntax.
+* How to use the Red Hat build of Apache Camel SAP Queued Remote Function Call Destination Camel component to reliably update data in SAP. 
 * How to configure connections used by the component.
 
 For more information see:
 
-* <https://access.redhat.com/documentation/en-us/red_hat_fuse/7.0/html-single/apache_camel_component_reference/#SAP> for more information about the JBoss Fuse SAP Camel components 
+* <https://docs.redhat.com/en/documentation/red_hat_build_of_apache_camel/4.10/html/red_hat_build_of_apache_camel_for_spring_boot_reference/csb-camel-sap-component-starter> for more information about the Red Hat build of Apache Camel SAP Camel components 
 * <https://access.redhat.com/products/red-hat-fuse> for more information about using JBoss Fuse
 
 System requirements

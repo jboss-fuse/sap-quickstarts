@@ -16,22 +16,22 @@ Source: <http://github.com/jboss-fuse/sap-quickstarts/>
 What is it?  
 -----------  
 
-This quick start shows how to integrate Apache Camel with SAP using the JBoss Fuse SAP IDoc List Destination Camel component. This component and its endpoints should be used in cases where a camel route is required to send an Intermediate document (IDoc) list to an SAP system.  
+This quick start shows how to integrate Apache Camel with SAP using the Red Hat build of Apache Camel SAP IDoc List Destination Camel component. This component and its endpoints should be used in cases where a camel route is required to send an Intermediate document (IDoc) list to an SAP system.  
 
 This quick start contains a route with an initial timer endpoint which triggers and executes that route once. The route uses processor beans to build IDoc document lists containing `FLCUSTOMER_CREATEFROMDATA01` type IDoc documents to create Customer records in SAP. These document lists are routed to `sap-idoclist-destination` endpoints which use the tRFC protocol to send these document lists to the ALE subsystem in SAP which creates the Customer records. The route logs to the console the serialized contents of the document lists it sends.  
 
-**NOTE:** This component does not guarantee that a series of IDoc lists sent through its endpoints are delivered and processed in the receiving SAP system in the same order that they were sent. The delivery and processing order of these lists may differ on the receiving SAP system due to communication errors and resends of a document list. To guarantee the delivery and processing order of a series of IDoc lists please see the JBoss Fuse SAP Queued IDoc List Destination Camel component.     
+**NOTE:** This component does not guarantee that a series of IDoc lists sent through its endpoints are delivered and processed in the receiving SAP system in the same order that they were sent. The delivery and processing order of these lists may differ on the receiving SAP system due to communication errors and resends of a document list. To guarantee the delivery and processing order of a series of IDoc lists please see the Red Hat build of Apache Camel SAP Queued IDoc List Destination Camel component.     
 
 In studying this quick start you will learn:
 
-* How to configure the Camel runtime environment in order to deploy the JBoss Fuse SAP IDoc List Destination Camel component. 
-* How to define a Camel route containing the JBoss Fuse SAP IDoc List Destination Camel component using the Spring XML syntax.
-* How to use the JBoss Fuse SAP IDoc List Destination Camel component to send IDoc lists to SAP. 
+* How to configure the Camel runtime environment in order to deploy the Red Hat build of Apache Camel SAP IDoc List Destination Camel component. 
+* How to define a Camel route containing the Red Hat build of Apache Camel SAP IDoc List Destination Camel component using the Spring XML syntax.
+* How to use the Red Hat build of Apache Camel SAP IDoc List Destination Camel component to send IDoc lists to SAP. 
 * How to configure connections used by the component.
 
 For more information see:
 
-* <https://access.redhat.com/documentation/en-us/red_hat_fuse/7.0/html-single/apache_camel_component_reference/#SAP> for more information about the JBoss Fuse SAP Camel components 
+* <https://docs.redhat.com/en/documentation/red_hat_build_of_apache_camel/4.10/html/red_hat_build_of_apache_camel_for_spring_boot_reference/csb-camel-sap-component-starter> for more information about the Red Hat build of Apache Camel SAP Camel components 
 * <https://access.redhat.com/products/red-hat-fuse> for more information about using JBoss Fuse
 
 System requirements

@@ -1,52 +1,47 @@
-Standalone SAP IDoc Destination Endpoint Quick Start
-===========================================
+# Standalone SAP IDoc Destination Endpoint Quick Start
 **Demonstrates the sap-idoc-destination component running in a standalone camel runtime.**   
 ![SAP Tool Suite](../../sap_tool_suite.png "SAP Tool Suite")
 
-* * * 
-Author: William Collins - Fuse Team  
-Level: Beginner  
-Technologies: SAP, Camel, Spring  
-Summary: This quickstart demonstrates how to configure and use the sap-idoc-destination component in a standalone Camel environment to send Intermediate Documents (IDocs) to SAP. This component sends IDoc documents to SAP using the *Transactional RFC* (tRFC) protocol.  
-Target Product: Red Hat Build of Camel Spring Boot
-Source: <http://github.com/jboss-fuse/sap-quickstarts/>
+| Property | Value |
+|----------|-------|
+| Author | William Collins - Fuse Team |
+| Level | Beginner |
+| Technologies | SAP, Camel, Spring |
+| Summary | This quickstart demonstrates how to configure and use the sap-idoc-destination component in a standalone Camel environment to send Intermediate Documents (IDocs) to SAP. This component sends IDoc documents to SAP using the *Transactional RFC* (tRFC) protocol. |
+| Target Product | Red Hat build of Apache Camel for Spring Boot |
+| Source | <http://github.com/jboss-fuse/sap-quickstarts/> |
 
-* * *
+## What is it?  
 
-What is it?  
------------  
-
-This quick start shows how to integrate Apache Camel with SAP using the JBoss Fuse SAP IDoc Destination Camel component. This component and its endpoints should be used in cases where a camel route is required to send an Intermediate document (IDoc) to an SAP system.  
+This quick start shows how to integrate Apache Camel with SAP using the Red Hat build of Apache Camel SAP IDoc Destination Camel component. This component and its endpoints should be used in cases where a camel route is required to send an Intermediate document (IDoc) to an SAP system.  
 
 This quick start contains a route with an initial timer endpoint which triggers and executes that route once. The route uses processor beans to build `FLCUSTOMER_CREATEFROMDATA01` type IDoc documents to create Customer records in SAP. These documents are routed to `sap-idoc-destination` endpoints which use the tRFC protocol to send these documents to the ALE subsystem in SAP which creates the Customer records. The route logs to the console the serialized contents of each document it sends.  
 
-**NOTE:** This component does not guarantee that a series of IDocs sent through its endpoints are delivered and processed in the receiving SAP system in the same order that they were sent. The delivery and processing order of these documents may differ on the receiving SAP system due to communication errors and resends of a document. To guarantee the delivery and processing order of a series of IDocs please see the JBoss Fuse SAP Queued IDoc Destination Camel component.     
+**NOTE:** This component does not guarantee that a series of IDocs sent through its endpoints are delivered and processed in the receiving SAP system in the same order that they were sent. The delivery and processing order of these documents may differ on the receiving SAP system due to communication errors and resends of a document. To guarantee the delivery and processing order of a series of IDocs please see the Red Hat build of Apache Camel SAP Queued IDoc Destination Camel component.     
 
 In studying this quick start you will learn:
 
-* How to configure the Camel runtime environment in order to deploy the JBoss Fuse SAP IDoc Destination Camel component. 
-* How to define a Camel route containing the JBoss Fuse SAP IDoc Destination Camel component using the Spring XML syntax.
-* How to use the JBoss Fuse SAP IDoc Destination Camel component to send IDocs to SAP. 
+* How to configure the Camel runtime environment in order to deploy the Red Hat build of Apache Camel SAP IDoc Destination Camel component.
+* How to define a Camel route containing the Red Hat build of Apache Camel SAP IDoc Destination Camel component using the Spring XML syntax.
+* How to use the Red Hat build of Apache Camel SAP IDoc Destination Camel component to send IDocs to SAP. 
 * How to configure connections used by the component.
 
 For more information see:
 
-* <https://access.redhat.com/documentation/en-us/red_hat_fuse/7.0/html-single/apache_camel_component_reference/#SAP> for more information about the JBoss Fuse SAP Camel components 
-* <https://access.redhat.com/products/red-hat-fuse> for more information about using JBoss Fuse
+* <https://docs.redhat.com/en/documentation/red_hat_build_of_apache_camel/4.10/html/red_hat_build_of_apache_camel_for_spring_boot_reference/csb-camel-sap-component-starter> for more information about the Red Hat build of Apache Camel SAP Camel components
+* <https://access.redhat.com/products/red-hat-fuse> for more information about using Red Hat Fuse
 
-System requirements
--------------------
+## System Requirements
 
 Before building and running this quick start you will need:
 
 * Maven 3.6.2 or higher
 * JDK 11
-* Red Hat Build of Camel Spring Boot
+* Red Hat build of Apache Camel for Spring Boot
 * SAP JCo3 and IDoc3 libraries (sapjco3.jar, sapidoc3.jar and JCo native library for your OS platform)
 * SAP instance with [Flight Data Application](http://help.sap.com/saphelp_erp60_sp/helpdata/en/db/7c623cf568896be10000000a11405a/content.htm) setup.
 
-Configuring the ALE Subsystem
------------------------------
+## Configuring the ALE Subsystem
 
 To send IDocs from the quick start's route to your SAP system, you must first configure the Application Linking Enabling (ALE) subsystem in your SAP system:
 
@@ -60,7 +55,7 @@ To send IDocs from the quick start's route to your SAP system, you must first co
         | QUICKSTART | QUICKSTART |      
         | QUICKCLNT  | QUICKCLNT  |
 
-	c. Return to the `SALE`  transaction main screen (Goto > Back).
+	c. Return to the `SALE` transaction main screen (Goto > Back).
 3. Ensure the `QUICKCLNT` logical system has been assigned to you SAP client:  
     a. Run the `Assign Logical System to Client` step (Basic Settings > Logical Systems > Assign Logical System to Client).   
     b. Select the `QUICKCLNT` for your client's `Logical system` and save your changes.     
@@ -86,16 +81,14 @@ To send IDocs from the quick start's route to your SAP system, you must first co
       4. **Method** : `CreateFromData`.   
    d. Ensure `Partner Profiles` have been generated for the quick start and your SAP client (Environment > Generate Partner Profiles).   
  
-Configuring the Quickstart for your environment
------------------------------------------------
+## Configuring the Quickstart for your Environment
 
 To configure the quick start for your environment: 
 
 1. Deploy the JCo3 library jar and native library (for your platform) and IDoc3 library jar to the `lib` folder of the project.
 2. Ensure that the **SAP Instance Configuration Configuration Parameters** in the parent pom.xml file (`../../.pom.xml`) of quick starts project has been set to match the connection configuration for your SAP instance.  
 
-Build and Run the Quickstart
-----------------------------
+## Build and Run the Quickstart
 
 To build and run the quick start:
 
@@ -106,8 +99,7 @@ To build and run the quick start:
 5. Using the SAP GUI, run transaction `SE16`, Data Browser, and display the contents of the table `SCUSTOM`.
 6. Search the table (Edit > Find..) for the newly created Customer records: `Fred Flintstone`, `Wilma Flintstone`, `Barney Rubble`, and `Betty Rubble`. 
 
-Stopping the Quickstart
------------------------
+## Stopping the Quickstart
 
 To stop the camel run-time:
 

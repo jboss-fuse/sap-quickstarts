@@ -16,22 +16,22 @@ Source: <http://github.com/jboss-fuse/sap-quickstarts/>
 What is it?  
 -----------  
 
-This quick start shows how to integrate Apache Camel with SAP using the JBoss Fuse SAP Synchronous Remote Function Call Server Camel component. This component and its endpoints should be used in cases where a Camel route is required to synchronously handle requests from and responses to an SAP system.  
+This quick start shows how to integrate Apache Camel with SAP using the Red Hat build of Apache Camel SAP Synchronous Remote Function Call Server Camel component. This component and its endpoints should be used in cases where a Camel route is required to synchronously handle requests from and responses to an SAP system.  
 
 This quick start handles requests from SAP for the `GetList` method of the `FlightCustomer` BAPI to query for Customer records in the Flight Data Application. The route of this quick start simply mocks the behavior of this method by returning a fixed response of Customer records. The `sap-srfc-server` endpoint at the beginning of the route consumes a request from SAP and its contents is placed into the message body of the exchange's message. The request is then logged to the console. A processor bean then builds a response message for the BAPI method which contains a fixed set of customer records. It then replaces the message body of the exchange's message with this response. The response is then logged to the console. The `sap-srfc-server`  endpoint then sends the response message back to the caller in SAP.  
 
-**NOTE** The sRFC protocol used by this component delivers requests and responses from and to an SAP system **BEST-EFFORT**. When an SAP system experiences a communication error when sending a request to or receiving a response from this component, it will be *in doubt* whether the processing of a remote function call in Camel was successful. For the guaranteed delivery and processing of requests in Camel please see the JBoss Fuse SAP Transactional Remote Function Call Server Camel component.     
+**NOTE** The sRFC protocol used by this component delivers requests and responses from and to an SAP system **BEST-EFFORT**. When an SAP system experiences a communication error when sending a request to or receiving a response from this component, it will be *in doubt* whether the processing of a remote function call in Camel was successful. For the guaranteed delivery and processing of requests in Camel please see the Red Hat build of Apache Camel SAP Transactional Remote Function Call Server Camel component.     
 
 In studying this quick start you will learn:
 
-* How to configure the Camel runtime environment in order to deploy the JBoss Fuse SAP Synchronous Remote Function Call Server Camel component. 
-* How to define a Camel route containing the JBoss Fuse SAP Synchronous Remote Function Call Server Camel component using the Spring XML syntax.
-* How to use the JBoss Fuse SAP Synchronous Remote Function Call Server Camel component to handle requests from SAP. 
+* How to configure the Camel runtime environment in order to deploy the Red Hat build of Apache Camel SAP Synchronous Remote Function Call Server Camel component. 
+* How to define a Camel route containing the Red Hat build of Apache Camel SAP Synchronous Remote Function Call Server Camel component using the Spring XML syntax.
+* How to use the Red Hat build of Apache Camel SAP Synchronous Remote Function Call Server Camel component to handle requests from SAP. 
 * How to configure connections used by the component.
 
 For more information see:
 
-* <https://access.redhat.com/documentation/en-us/red_hat_fuse/7.0/html-single/apache_camel_component_reference/#SAP> for more information about the JBoss Fuse SAP Camel components 
+* <https://docs.redhat.com/en/documentation/red_hat_build_of_apache_camel/4.10/html/red_hat_build_of_apache_camel_for_spring_boot_reference/csb-camel-sap-component-starter> for more information about the Red Hat build of Apache Camel SAP Camel components 
 * <https://access.redhat.com/products/red-hat-fuse> for more information about using JBoss Fuse
 
 System requirements

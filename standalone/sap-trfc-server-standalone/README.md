@@ -16,7 +16,7 @@ Source: <http://github.com/jboss-fuse/sap-quickstarts/>
 What is it?  
 -----------  
 
-This quick start shows how to integrate Apache Camel with SAP using the JBoss Fuse SAP Transactional Remote Function Call Server Camel component. This component and its endpoints should be used in cases where the sending SAP system requires **AT-MOST-ONCE** delivery of its requests to a Camel route. To accomplish this the sending SAP system generates a *transcation ID* (*tid*) which accompanies every request it sends to the component's endpoints. The sending SAP system will first check with the component whether a given tid has been received by it before sending a series of requests associated with the tid. The component will check a list of received tids it maintains, record the sent tid if it is not in that list and then respond to the sending SAP system with whether the tid had already been recorded. The sending SAP system will only then send the series of requests if the tid has not been previously recorded. This enables a sending SAP system to reliably send a series of requests once to a camel route. 
+This quick start shows how to integrate Apache Camel with SAP using the Red Hat build of Apache Camel SAP Transactional Remote Function Call Server Camel component. This component and its endpoints should be used in cases where the sending SAP system requires **AT-MOST-ONCE** delivery of its requests to a Camel route. To accomplish this the sending SAP system generates a *transcation ID* (*tid*) which accompanies every request it sends to the component's endpoints. The sending SAP system will first check with the component whether a given tid has been received by it before sending a series of requests associated with the tid. The component will check a list of received tids it maintains, record the sent tid if it is not in that list and then respond to the sending SAP system with whether the tid had already been recorded. The sending SAP system will only then send the series of requests if the tid has not been previously recorded. This enables a sending SAP system to reliably send a series of requests once to a camel route. 
 
 This quick start handles requests from SAP for the `CreateFromData` method of the `FlightCustomer` BAPI to create flight customer records in the Flight Data Application. The route of this quick start simply mocks the behavior of this method by logging the requests it receives. The `sap-trfc-server` endpoint at the beginning of the route consumes a request from SAP and its contents is placed into the message body of the exchange's message. The request is then logged to the console. 
 
@@ -24,20 +24,20 @@ This quick start handles requests from SAP for the `CreateFromData` method of th
 
 **NOTE:** The sending SAP system will send a request using the tRFC protocol to the compponent's endpoint only when invoking the endpoint with the **IN BACKGROUND TASK** option within SAP. These calls are stored in the SAP database and are not sent until the local transaction within SAP is committed.   
 
-**NOTE:** If the endpoints of this component receive a request from SAP using the sRFC protocol, the request will be processed as in the JBoss Fuse SAP Synchronous Remote Function Call Server Camel component however a response will not be sent back to the calling SAP system.    
+**NOTE:** If the endpoints of this component receive a request from SAP using the sRFC protocol, the request will be processed as in the Red Hat build of Apache Camel SAP Synchronous Remote Function Call Server Camel component however a response will not be sent back to the calling SAP system.    
 
 **NOTE:** This component does not guarantee that a series of requests sent through its endpoints are handled and processed in the receiving Camel route in the same order that they were sent. The delivery and processing order of these requests may differ on the receiving Camel route due to communication errors and resends of a document list. This component only guarantees that each request is processed **AT-MOST-ONCE**. To guarantee the delivery **and** processing order of a series of requests from SAP it is incumbent upon the sending SAP system to serialize its requests to an **outbound queue** when sending them to this component to achieve **IN-ORDER** delivery and processing guarantees.  
 
 In studying this quick start you will learn:
 
-* How to configure the Camel runtime environment in order to deploy the JBoss Fuse SAP Transactional Remote Function Call Server Camel component. 
-* How to define a Camel route containing the JBoss Fuse SAP Transactional Remote Function Call Server Camel component using the Spring XML syntax.
-* How to use the JBoss Fuse SAP Transactional Remote Function Call Server Camel component to handle requests from SAP. 
+* How to configure the Camel runtime environment in order to deploy the Red Hat build of Apache Camel SAP Transactional Remote Function Call Server Camel component. 
+* How to define a Camel route containing the Red Hat build of Apache Camel SAP Transactional Remote Function Call Server Camel component using the Spring XML syntax.
+* How to use the Red Hat build of Apache Camel SAP Transactional Remote Function Call Server Camel component to handle requests from SAP. 
 * How to configure connections used by the component.
 
 For more information see:
 
-* <https://access.redhat.com/documentation/en-us/red_hat_fuse/7.0/html-single/apache_camel_component_reference/#SAP> for more information about the JBoss Fuse SAP Camel components 
+* <https://docs.redhat.com/en/documentation/red_hat_build_of_apache_camel/4.10/html/red_hat_build_of_apache_camel_for_spring_boot_reference/csb-camel-sap-component-starter> for more information about the Red Hat build of Apache Camel SAP Camel components 
 * <https://access.redhat.com/products/red-hat-fuse> for more information about using JBoss Fuse
 
 System requirements

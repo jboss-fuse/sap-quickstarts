@@ -16,7 +16,7 @@ Source: <http://github.com/jboss-fuse/sap-quickstarts/>
 What is it?  
 -----------  
 
-This quick start shows how to integrate Apache Camel with SAP using the JBoss Fuse SAP IDoc List Server Camel component. This component and its endpoints should be used in cases where a sending SAP system requires delivery of Intermediate Document lists to a Camel route. This component uses the tRFC protocol to communicate with SAP as described in the `sap-trfc-server-standalone` quick start.
+This quick start shows how to integrate Apache Camel with SAP using the Red Hat build of Apache Camel SAP IDoc List Server Camel component. This component and its endpoints should be used in cases where a sending SAP system requires delivery of Intermediate Document lists to a Camel route. This component uses the tRFC protocol to communicate with SAP as described in the `sap-trfc-server-standalone` quick start.
 
 This quick start handles lists of `FLCUSTOMER_CREATEFROMDATA01` type IDoc documents from SAP to create Customer records in the Flight Data Application. The route of this quick start simply mocks the processing of these documents by logging the documents it receives. The `sap-idoclist-server` endpoint at the beginning of the route consumes a list of IDoc documents from SAP and its contents is placed into the message body of the exchange's message. The document list is then logged to the console.
 
@@ -24,14 +24,14 @@ This quick start handles lists of `FLCUSTOMER_CREATEFROMDATA01` type IDoc docume
 
 In studying this quick start you will learn:
 
-* How to configure the Camel runtime environment in order to deploy the JBoss Fuse SAP IDoc List Server Camel component. 
-* How to define a Camel route containing the JBoss Fuse SAP IDoc List Server Camel component using the Spring XML syntax.
-* How to use the JBoss Fuse SAP IDoc List Server Camel component to receive IDoc lists from SAP. 
+* How to configure the Camel runtime environment in order to deploy the Red Hat build of Apache Camel SAP IDoc List Server Camel component. 
+* How to define a Camel route containing the Red Hat build of Apache Camel SAP IDoc List Server Camel component using the Spring XML syntax.
+* How to use the Red Hat build of Apache Camel SAP IDoc List Server Camel component to receive IDoc lists from SAP. 
 * How to configure connections used by the component.
 
 For more information see:
 
-* <https://access.redhat.com/documentation/en-us/red_hat_fuse/7.0/html-single/apache_camel_component_reference/#SAP> for more information about the JBoss Fuse SAP Camel components 
+* <https://docs.redhat.com/en/documentation/red_hat_build_of_apache_camel/4.10/html/red_hat_build_of_apache_camel_for_spring_boot_reference/csb-camel-sap-component-starter> for more information about the Red Hat build of Apache Camel SAP Camel components 
 * <https://access.redhat.com/products/red-hat-fuse> for more information about using JBoss Fuse
 
 System requirements
