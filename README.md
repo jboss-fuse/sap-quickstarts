@@ -1,54 +1,45 @@
-SAP Quick Starts  
-================  
- **This directory contains a set of quick start projects to get you started with the suite of JBoss Fuse SAP Camel components.**  
+code# SAP Quick Starts  
+**This directory contains a set of quick start projects to get you started with the suite of Red Hat build of Apache Camel SAP components.**  
 ![SAP Tool Suite](sap_tool_suite.png "SAP Tool Suite")
 
-***  
-Author: William Collins - Fuse Team  
-Level: Beginner to Advanced  
-Technologies: SAP, Camel, JBoss Fuse   
-Summary: These quick starts demonstrates how to configure and use the suite of JBoss Fuse SAP Camel components to integrate Apache Camel with SAP.       
-Target Product: Red Hat Build of Camel Spring Boot
-Source: <http://github.com/fusesource/sap-quickstarts/>  
+---
 
-***  
+**Author:** William Collins - Fuse Team  
+**Level:** Beginner to Advanced  
+**Technologies:** SAP, Camel, Red Hat build of Apache Camel  
+**Summary:** These quick starts demonstrate how to configure and use the suite of Red Hat build of Apache Camel SAP components to integrate Apache Camel with SAP.  
+**Target Product:** Red Hat build of Apache Camel Spring Boot  
+**Source:** <http://github.com/fusesource/sap-quickstarts/>
 
-Overview  
---------  
+---  
 
-The JBoss Fuse SAP quick starts are divided into three categories which demonstrate how to configure, deploy and run the JBoss Fuse SAP Camel components in different runtime environments.   
+## Overview
 
-###[Standalone](standalone/README.md)  
+The Red Hat build of Apache Camel SAP quick starts are divided into two categories which demonstrate how to configure, deploy and run the Red Hat build of Apache Camel SAP components in different runtime environments.
 
-The quick starts in this directory demonstrates how to configure, deploy and run the JBoss Fuse SAP Camel components in a standalone Camel container runtime.
+### [Standalone](standalone/README.md)
 
+The quick starts in this directory demonstrate how to configure, deploy and run the Red Hat build of Apache Camel SAP components in a standalone Camel container runtime.
 
-###[Fuse](fuse/README.md)  
+### [Spring Boot](spring-boot/README.md)
 
-The quick starts in this directory demonstrates how to configure, deploy and run the JBoss Fuse SAP Camel components in a JBoss Fuse OSGi container runtime.
+The quick starts in this directory demonstrate how to configure, deploy and run the Red Hat build of Apache Camel SAP components in a Spring Boot Camel container runtime.
 
-###[Spring Boot](spring-boot/README.md)  
+---
 
-The quick starts in this directory demonstrates how to configure, deploy and run the JBoss Fuse SAP Camel components in a Spring Boot Camel container runtime.
+## Additional Resources
 
------
 For more information see:
 
-* <https://access.redhat.com/documentation/en-us/red_hat_fuse/7.0/html-single/apache_camel_component_reference/#SAP> for more information about the JBoss Fuse SAP Camel components 
-* <https://access.redhat.com/products/red-hat-fuse> for more information about using JBoss Fuse
+* [Red Hat build of Apache Camel SAP Component Starter](https://docs.redhat.com/en/documentation/red_hat_build_of_apache_camel/4.0/html/red_hat_build_of_apache_camel_for_spring_boot_reference/csb-camel-sap-component-starter) - Documentation for the Red Hat build of Apache Camel SAP components
+* [Red Hat build of Apache Camel Documentation](https://docs.redhat.com/en/documentation/red_hat_build_of_apache_camel/4.10) - General documentation for using Red Hat build of Apache Camel
 
-System requirements
--------------------
+## System Requirements
 
 To run these quick starts you will need:
 
 * Maven 3.6.2 or higher
-* JDK 11
-* Red Hat Build of Camel Spring Boot
+* JDK 11 or higher
+* Red Hat build of Apache Camel Spring Boot
 * SAP JCo3 and IDoc3 libraries (sapjco3.jar, sapidoc3.jar and JCo native library for your OS platform)
-* SAP instance with [Flight Data Application](http://help.sap.com/saphelp_erp60_sp/helpdata/en/db/7c623cf568896be10000000a11405a/content.htm) setup.
-
-
-
-  
-  
+* SAP instance with [Flight Data Application](http://help.sap.com/saphelp_erp60_sp/helpdata/en/db/7c623cf568896be10000000a11405a/content.htm) setup
