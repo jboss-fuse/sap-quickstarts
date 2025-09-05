@@ -1,4 +1,5 @@
 target
+${native.lib.filename}.${envType}
 sapidoc3.jar
 sapjco3.jar
 libsapjco3.so
