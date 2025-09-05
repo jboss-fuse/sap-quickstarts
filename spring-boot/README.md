@@ -1,111 +1,125 @@
-SAP Quick Starts  
-================  
- **This directory contains a set of quick start projects to get you started with using the suite of JBoss Fuse SAP Camel components in a Spring Boot Camel runtime.**  
+# SAP Quick Starts for Spring Boot
+
+**This directory contains a set of quick start projects to get you started with using the suite of Red Hat build of Apache Camel SAP components in a Spring Boot runtime.**  
 ![SAP Tool Suite](../sap_tool_suite.png "SAP Tool Suite")
 
-***  
-Author: William Collins - Fuse Team  
-Level: Beginner to Advanced  
-Technologies: SAP, Camel, Spring  
-Summary: These quick starts demonstrates how to configure and use the suite of JBoss Fuse SAP Camel components to integrate Apache Camel with SAP.       
-Target Product: Red Hat Build of Camel Spring Boot
-Source: <http://github.com/jboss-fuse/sap-quickstarts/>
+---
 
-***  
+**Author:** William Collins - Fuse Team  
+**Level:** Beginner to Advanced  
+**Technologies:** SAP, Camel, Spring Boot  
+**Summary:** These quick starts demonstrate how to configure and use the suite of Red Hat build of Apache Camel SAP components to integrate Apache Camel with SAP.  
+**Target Product:** Red Hat build of Apache Camel Spring Boot  
+**Source:** <http://github.com/jboss-fuse/sap-quickstarts/>
 
-Overview  
---------  
+---  
 
-It is recommended that you study and run the quick starts in the following order:  
+## Overview
 
-###[sap-srfc-destination-spring-boot](sap-srfc-destination-spring-boot/README.md)  
+It is recommended that you study and run the quick starts in the following order:
 
-Demonstrates how to perform *Synchronous Remote Function Calls* (sRFC) to SAP from Apache Camel.   
+### Remote Function Call (RFC) Examples
 
-###[sap-trfc-destination-spring-boot](sap-trfc-destination-spring-boot/README.md)    
+#### [sap-srfc-destination-spring-boot](sap-srfc-destination-spring-boot/README.md)
 
-Demonstrates how to perform *Transactional Remote Function Calls* (tRFC) to SAP from Apache Camel.   
+Demonstrates how to perform *Synchronous Remote Function Calls* (sRFC) to SAP from Apache Camel.
 
-###[sap-qrfc-destination-spring-boot](sap-qrfc-destination-spring-boot/README.md)    
+#### [sap-trfc-destination-spring-boot](sap-trfc-destination-spring-boot/README.md)
 
-Demonstrates how to perform *Queued Remote Function Calls* (qRFC) to SAP from Apache Camel.   
+Demonstrates how to perform *Transactional Remote Function Calls* (tRFC) to SAP from Apache Camel.
 
-###[sap-srfc-server-spring-boot](sap-srfc-server-spring-boot/README.md)  
+#### [sap-qrfc-destination-spring-boot](sap-qrfc-destination-spring-boot/README.md)
 
-Demonstrates how to handle *Synchronous Remote Function Calls* (sRFC) from SAP within Apache Camel.   
-  
-###[sap-trfc-server-spring-boot](sap-trfc-server-spring-boot/README.md)  
+Demonstrates how to perform *Queued Remote Function Calls* (qRFC) to SAP from Apache Camel.
 
-Demonstrates how to handle *Transactional Remote Function Calls* (tRFC) from SAP within Apache Camel.   
+#### [sap-srfc-server-spring-boot](sap-srfc-server-spring-boot/README.md)
 
-###[sap-idoc-destination-spring-boot](sap-idoc-destination-spring-boot/README.md)   
+Demonstrates how to handle *Synchronous Remote Function Calls* (sRFC) from SAP within Apache Camel.
 
-Demonstrates how to send an Intermediate Document (IDoc) to SAP from Apache Camel.   
+#### [sap-trfc-server-spring-boot](sap-trfc-server-spring-boot/README.md)
 
-###[sap-idoclist-destination-spring-boot](sap-idoclist-destination-spring-boot/README.md)   
+Demonstrates how to handle *Transactional Remote Function Calls* (tRFC) from SAP within Apache Camel.
 
-Demonstrates how to send a list of Intermediate Document (IDoc) to SAP from Apache Camel.   
+### Intermediate Document (IDoc) Examples
 
-###[sap-qidoc-destination-spring-boot](sap-qidoc-destination-spring-boot/README.md)   
+#### [sap-idoc-destination-spring-boot](sap-idoc-destination-spring-boot/README.md)
 
-Demonstrates how to send an Intermediate Document (IDoc) using the qRFC protocol to SAP from Apache Camel.   
+Demonstrates how to send an Intermediate Document (IDoc) to SAP from Apache Camel.
 
-###[sap-qidoclist-destination-spring-boot](sap-qidoclist-destination-spring-boot/README.md)   
+#### [sap-idoclist-destination-spring-boot](sap-idoclist-destination-spring-boot/README.md)
 
-Demonstrates how to send a list of Intermediate Document (IDoc) using the qRFC protocol to SAP from Apache Camel.   
+Demonstrates how to send a list of Intermediate Documents (IDocs) to SAP from Apache Camel.
 
-###[sap-idoclist-server-spring-boot](sap-idoclist-server-spring-boot/README.md)   
+#### [sap-qidoc-destination-spring-boot](sap-qidoc-destination-spring-boot/README.md)
 
-Demonstrates how to handle a list of Intermediate Document (IDoc) from SAP within Apache Camel.   
+Demonstrates how to send an Intermediate Document (IDoc) using the qRFC protocol to SAP from Apache Camel.
 
------
+#### [sap-qidoclist-destination-spring-boot](sap-qidoclist-destination-spring-boot/README.md)
+
+Demonstrates how to send a list of Intermediate Documents (IDocs) using the qRFC protocol to SAP from Apache Camel.
+
+#### [sap-idoclist-server-spring-boot](sap-idoclist-server-spring-boot/README.md)
+
+Demonstrates how to handle a list of Intermediate Documents (IDocs) from SAP within Apache Camel.   
+
+---
+
+## Additional Resources
+
 For more information see:
 
-* <https://access.redhat.com/documentation/en-us/red_hat_fuse/7.0/html-single/apache_camel_component_reference/#SAP> for more information about the JBoss Fuse SAP Camel components 
-* <https://access.redhat.com/products/red-hat-fuse> for more information about using JBoss Fuse
+* [Red Hat build of Apache Camel SAP Component Reference](https://docs.redhat.com/en/documentation/red_hat_build_of_apache_camel/4.0/html/red_hat_build_of_apache_camel_for_spring_boot_reference/csb-camel-sap-component-starter) - Documentation for the Red Hat build of Apache Camel SAP components
+* [Red Hat build of Apache Camel Documentation](https://docs.redhat.com/en/documentation/red_hat_build_of_apache_camel/4.10) - General documentation for using Red Hat build of Apache Camel
 
-System requirements
--------------------
+## System Requirements
 
 To run these quick starts you will need:
 
 * Maven 3.6.2 or higher
-* JDK 11
-* Red Hat Build of Camel Spring Boot
-* SAP JCo3 and IDoc3 libraries (sapjco3.jar, sapidoc3.jar and JCo native library for your OS platform) installed in your local Maven repository (see how to at the end)
-* SAP instance with [Flight Data Application](http://help.sap.com/saphelp_erp60_sp/helpdata/en/db/7c623cf568896be10000000a11405a/content.htm) setup.
+* JDK 11 or higher
+* Red Hat build of Apache Camel Spring Boot
+* SAP JCo3 and IDoc3 libraries (sapjco3.jar, sapidoc3.jar and JCo native library for your OS platform) installed in your local Maven repository (see installation instructions below)
+* SAP instance with [Flight Data Application](http://help.sap.com/saphelp_erp60_sp/helpdata/en/db/7c623cf568896be10000000a11405a/content.htm) setup
 
----
-Install SAP libraries in your local Maven repository
----
+## Installing SAP Libraries in Your Local Maven Repository
 
-To install your three SAP libraries in your Maven repository you will need to run three commands using Maven:
+To install the required SAP libraries in your Maven repository, you will need to run the following commands:
 
+### Install JAR Libraries
 
-mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.4 -Dpackaging=jar -Dfile=sapjco3.jar
+```bash
+mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.12 -Dpackaging=jar -Dfile=sapjco3.jar
 
-mvn install:install-file -DgroupId=com.sap.conn.idoc -DartifactId=sapidoc3 -Dversion=3.1.1 -Dpackaging=jar -Dfile=sapidoc3.jar
+mvn install:install-file -DgroupId=com.sap.conn.idoc -DartifactId=sapidoc3 -Dversion=3.1.4 -Dpackaging=jar -Dfile=sapidoc3.jar
+```
 
-Installing the JCo native library will depend on the Operating System and architecture you are running. For example: 
+### Install Native Library
 
-for Linux x86 64 bit:
+Installing the JCo native library depends on your operating system and architecture:
 
-mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.4 -Dclassifier=linux-x86_64 -Dpackaging=so -Dfile=libsapjco3.so
+#### Linux x86 64-bit
+```bash
+mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.12 -Dclassifier=linux-x86_64 -Dpackaging=so -Dfile=libsapjco3.so
+```
 
-MacOS 64 bit:
+#### macOS 64-bit (Intel)
+```bash
+mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.12 -Dclassifier=macosx-x86_64 -Dpackaging=dylib -Dfile=libsapjco3.dylib
+```
 
-mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.4 -Dclassifier=macosx-x86_64 -Dpackaging=dylib -Dfile=libsapjco3.dylib
+#### macOS ARM 64-bit (Apple Silicon)
+```bash
+mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.12 -Dclassifier=macosx-aarch_64 -Dpackaging=dylib -Dfile=libsapjco3.dylib
+```
 
-Windows 64 bit
+#### Windows 64-bit
+```bash
+mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.12 -Dclassifier=win-x86_64 -Dpackaging=dll -Dfile=sapjco3.dll
+```
 
-mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.4 -Dclassifier=win-x86_64 -Dpackaging=dll -Dfile=sapjco3.dll
+### Additional Information
 
-For more architectures please see the [pom.xml](pom.xml#L376)
-
-When using different version please also change the version in [pom.xml](pom.xml#L46)
-
-
-
-
+* For more architectures, please see the [pom.xml](pom.xml#L376)
+* When using different versions, please also change the version in [pom.xml](pom.xml#L46)
 
 

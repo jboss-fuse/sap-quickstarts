@@ -1,5 +1,4 @@
-Standalone SAP Synchronouse RFC Destination Endpoint Quick Start  
-=======================================================================================================================
+# Standalone SAP Synchronous RFC Destination Endpoint Quick Start
 **Demonstrates the sap-srfc-destination component running in a standalone camel runtime.**  
 ![SAP Tool Suite](../../sap_tool_suite.png "SAP Tool Suite")
 
@@ -8,7 +7,7 @@ Author: William Collins - Fuse Team
 Level: Beginner  
 Technologies: SAP, Camel, Spring  
 Summary: This quickstart demonstrates how to configure and use the sap-srfc-destination component in a standalone Camel environment to invoke remote function modules and BAPI methods within SAP. This component invokes remote function modules and BAPI methods within SAP using the *Synchronous RFC* (sRFC) protocol.       
-Target Product: Red Hat Build of Camel Spring Boot
+Target Product: Red Hat build of Apache Camel for Spring Boot
 Source: <http://github.com/jboss-fuse/sap-quickstarts/>
 
 * * *
@@ -16,22 +15,22 @@ Source: <http://github.com/jboss-fuse/sap-quickstarts/>
 What is it?  
 -----------  
 
-This quick start shows how to integrate Apache Camel with SAP using the JBoss Fuse SAP Synchronous Remote Function Call Destination Camel component. This component and its endpoints should be used in cases where Camel routes require synchronous delivery of requests to and responses from an SAP system.  
+This quick start shows how to integrate Apache Camel with SAP using the Red Hat build of Apache Camel SAP Synchronous Remote Function Call Destination Camel component. This component and its endpoints should be used in cases where Camel routes require synchronous delivery of requests to and responses from an SAP system.  
 
 This quick start contains a route with an initial timer endpoint which triggers and executes that route once. The route uses a processor bean to build a request to the `GetList` method of the `FlightCustomer` BAPI to retrieve up to 10 Customer records from SAP. The request is routed to a `sap-srfc-destination` endpoint to invoke the BAPI method and receive its response. The route logs to the console the serialized contents of the request and response messages it sends and receives.   
 
-**NOTE** The sRFC protocol used by this component delivers requests and responses to and from an SAP system **BEST-EFFORT**. When the component experiences a communication error when sending a request to or receiving a response from an SAP system, it will be *in doubt* whether the processing of a remote function call in the SAP system was successful. For the guaranteed delivery and processing of requests in an SAP system please see the JBoss Fuse SAP Transactional Remote Function Call Destination Camel component.     
+**NOTE** The sRFC protocol used by this component delivers requests and responses to and from an SAP system **BEST-EFFORT**. When the component experiences a communication error when sending a request to or receiving a response from an SAP system, it will be *in doubt* whether the processing of a remote function call in the SAP system was successful. For the guaranteed delivery and processing of requests in an SAP system please see the Red Hat build of Apache Camel SAP Transactional Remote Function Call Destination Camel component.     
 
 In studying this quick start you will learn:
 
-* How to configure the Camel runtime environment in order to deploy the JBoss Fuse SAP Synchronous Remote Function Call Destination Camel component. 
-* How to define a Camel route containing the JBoss Fuse SAP Synchronous Remote Function Call Destination Camel component using the Spring XML syntax.
-* How to use the JBoss Fuse SAP Synchronous Remote Function Call Destination Camel component. 
+* How to configure the Camel runtime environment in order to deploy the Red Hat build of Apache Camel SAP Synchronous Remote Function Call Destination Camel component. 
+* How to define a Camel route containing the Red Hat build of Apache Camel SAP Synchronous Remote Function Call Destination Camel component using the Spring XML syntax.
+* How to use the Red Hat build of Apache Camel SAP Synchronous Remote Function Call Destination Camel component. 
 * How to configure connections used by the component.
 
 For more information see:
 
-* <https://access.redhat.com/documentation/en-us/red_hat_fuse/7.0/html-single/apache_camel_component_reference/#SAP> for more information about the JBoss Fuse SAP Camel components 
+* <https://docs.redhat.com/en/documentation/red_hat_build_of_apache_camel/4.10/html/red_hat_build_of_apache_camel_for_spring_boot_reference/csb-camel-sap-component-starter> for more information about the Red Hat build of Apache Camel SAP Camel components 
 * <https://access.redhat.com/products/red-hat-fuse> for more information about using JBoss Fuse
 
 System requirements

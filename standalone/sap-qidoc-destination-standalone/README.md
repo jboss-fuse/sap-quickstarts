@@ -16,20 +16,20 @@ Source: <http://github.com/jboss-fuse/sap-quickstarts/>
 What is it?  
 -----------  
 
-This quick start shows how to integrate Apache Camel with SAP using the JBoss Fuse SAP Queued IDoc Destination Camel component. This component and its endpoints should be used in cases where a camel route is required to send Intermediate documents (IDocs) to an SAP system and ensure that the documents are processed in the SAP system in the same order that they were sent.  
+This quick start shows how to integrate Apache Camel with SAP using the Red Hat build of Apache Camel SAP Queued IDoc Destination Camel component. This component and its endpoints should be used in cases where a camel route is required to send Intermediate documents (IDocs) to an SAP system and ensure that the documents are processed in the SAP system in the same order that they were sent.  
 
 This quick start contains a route with an initial timer endpoint which triggers and executes that route once. The route uses processor beans to build `FLCUSTOMER_CREATEFROMDATA01` type IDoc documents to create Customer records in SAP. These documents are routed to `sap-qidoc-destination` endpoints which use the qRFC protocol to send these documents to the inbound queue `QUICKSTARTQUEUE` in SAP. When this queue is triggered, the documents are delivered in order to the ALE subsystem in SAP which creates the Customer records. The route logs to the console the serialized contents of the documents it sends.  
 
 In studying this quick start you will learn:
 
-* How to configure the Camel runtime environment in order to deploy the JBoss Fuse SAP Queued IDoc Destination Camel component. 
-* How to define a Camel route containing the JBoss Fuse SAP Queued IDoc Destination Camel component using the Spring XML syntax.
-* How to use the JBoss Fuse SAP Queued IDoc Destination Camel component to send IDocs to SAP. 
+* How to configure the Camel runtime environment in order to deploy the Red Hat build of Apache Camel SAP Queued IDoc Destination Camel component. 
+* How to define a Camel route containing the Red Hat build of Apache Camel SAP Queued IDoc Destination Camel component using the Spring XML syntax.
+* How to use the Red Hat build of Apache Camel SAP Queued IDoc Destination Camel component to send IDocs to SAP. 
 * How to configure connections used by the component.
 
 For more information see:
 
-* <https://access.redhat.com/documentation/en-us/red_hat_fuse/7.0/html-single/apache_camel_component_reference/#SAP> for more information about the JBoss Fuse SAP Camel components 
+* <https://docs.redhat.com/en/documentation/red_hat_build_of_apache_camel/4.10/html/red_hat_build_of_apache_camel_for_spring_boot_reference/csb-camel-sap-component-starter> for more information about the Red Hat build of Apache Camel SAP Camel components 
 * <https://access.redhat.com/products/red-hat-fuse> for more information about using JBoss Fuse
 
 System requirements
