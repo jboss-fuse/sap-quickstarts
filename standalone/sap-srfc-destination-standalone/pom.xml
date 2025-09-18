@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>com.redhat.quickstarts.fuse</groupId>
 		<artifactId>sap-quickstarts-parent</artifactId>
-		<version>4.10.6-SNAPSHOT</version>
+		<version>4.10.7-SNAPSHOT</version>
 		<relativePath>../..</relativePath>
 	</parent>
 
