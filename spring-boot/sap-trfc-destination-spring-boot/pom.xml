@@ -22,7 +22,7 @@
 	<parent>
 		<groupId>com.redhat.quickstarts.fuse</groupId>
 		<artifactId>sap-quickstarts-parent</artifactId>
-		<version>4.14.1-SNAPSHOT</version>
+		<version>4.14.2-SNAPSHOT</version>
 		<relativePath>../../pom.xml</relativePath>
 	</parent>
 	<properties>
