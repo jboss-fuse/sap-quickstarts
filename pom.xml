@@ -44,7 +44,7 @@
         <camel-version>4.14.2.redhat-00002</camel-version>
         <spring-boot-version>3.5.8</spring-boot-version>
         <slf4j-api-version>2.0.17</slf4j-api-version>
-        <sapjco3-version>3.1.12</sapjco3-version>
+        <sapjco3-version>3.1.13</sapjco3-version>
         <sapidoc3-version>3.1.4</sapidoc3-version>
 
         <!-- plugin versions -->

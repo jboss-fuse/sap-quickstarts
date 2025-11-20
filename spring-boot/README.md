@@ -88,7 +88,7 @@ To install the required SAP libraries in your Maven repository, you will need to
 ### Install JAR Libraries
 
 ```bash
-mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.12 -Dpackaging=jar -Dfile=sapjco3.jar
+mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.13 -Dpackaging=jar -Dfile=sapjco3.jar
 
 mvn install:install-file -DgroupId=com.sap.conn.idoc -DartifactId=sapidoc3 -Dversion=3.1.4 -Dpackaging=jar -Dfile=sapidoc3.jar
 ```
@@ -99,22 +99,22 @@ Installing the JCo native library depends on your operating system and architect
 
 #### Linux x86 64-bit
 ```bash
-mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.12 -Dclassifier=linux-x86_64 -Dpackaging=so -Dfile=libsapjco3.so
+mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.13 -Dclassifier=linux-x86_64 -Dpackaging=so -Dfile=libsapjco3.so
 ```
 
 #### macOS 64-bit (Intel)
 ```bash
-mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.12 -Dclassifier=macosx-x86_64 -Dpackaging=dylib -Dfile=libsapjco3.dylib
+mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.13 -Dclassifier=macosx-x86_64 -Dpackaging=dylib -Dfile=libsapjco3.dylib
 ```
 
 #### macOS ARM 64-bit (Apple Silicon)
 ```bash
-mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.12 -Dclassifier=macosx-aarch_64 -Dpackaging=dylib -Dfile=libsapjco3.dylib
+mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.13 -Dclassifier=macosx-aarch_64 -Dpackaging=dylib -Dfile=libsapjco3.dylib
 ```
 
 #### Windows 64-bit
 ```bash
-mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.12 -Dclassifier=win-x86_64 -Dpackaging=dll -Dfile=sapjco3.dll
+mvn install:install-file -DgroupId=com.sap.conn.jco -DartifactId=sapjco3 -Dversion=3.1.13 -Dclassifier=win-x86_64 -Dpackaging=dll -Dfile=sapjco3.dll
 ```
 
 ### Additional Information
