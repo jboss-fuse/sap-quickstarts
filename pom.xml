@@ -40,8 +40,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- dependency versions -->
-        <camel-spring-boot-version>4.18.1.redhat-00007</camel-spring-boot-version>
-        <camel-version>4.18.1.redhat-00006</camel-version>
+        <camel-spring-boot-version>4.18.3.redhat-00001</camel-spring-boot-version>
+        <camel-version>4.18.3.redhat-00001</camel-version>
         <spring-boot-version>3.5.16</spring-boot-version>
         <slf4j-api-version>2.0.17</slf4j-api-version>
         <sapjco3-version>3.1.13</sapjco3-version>
@@ -50,7 +50,7 @@
         <!-- plugin versions -->
         <maven-compiler-plugin-version>3.14.1</maven-compiler-plugin-version>
         <maven-resources-plugin-version>3.3.1</maven-resources-plugin-version>
-        <camel-maven-plugin-version>4.18.1</camel-maven-plugin-version>
+        <camel-maven-plugin-version>4.18.3</camel-maven-plugin-version>
         <maven-bundle-plugin-version>3.3.0</maven-bundle-plugin-version>
         <build-helper-maven-plugin-version>3.6.1</build-helper-maven-plugin-version>
         <fabric8-maven-plugin-version>3.5.26</fabric8-maven-plugin-version>
