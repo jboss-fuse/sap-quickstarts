@@ -97,6 +97,16 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>org.fusesource</groupId>
+                <artifactId>camel-sap</artifactId>
+                <version>${camel-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.fusesource</groupId>
+                <artifactId>camel-sap-starter</artifactId>
+                <version>${camel-version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.redhat.camel.springboot.platform</groupId>
                 <artifactId>camel-spring-boot-bom</artifactId>
                 <version>${camel-spring-boot-version}</version>
